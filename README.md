@@ -1,6 +1,7 @@
 # De gröna Ehdokas WP-plugin
 
 * Work in progress...
+* Plugin template build with: https://github.com/hlashbrooke/WordPress-Plugin-Template
 
 ### Development
 
