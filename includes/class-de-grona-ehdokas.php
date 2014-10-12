@@ -16,7 +16,7 @@ class De_grona_Ehdokas {
 	 * Settings class object
 	 * @var     object
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $settings = null;
 
@@ -24,7 +24,7 @@ class De_grona_Ehdokas {
 	 * The version number.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $_version;
 
@@ -32,7 +32,7 @@ class De_grona_Ehdokas {
 	 * The token.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $_token;
 
@@ -40,7 +40,7 @@ class De_grona_Ehdokas {
 	 * The main plugin file.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $file;
 
@@ -48,7 +48,7 @@ class De_grona_Ehdokas {
 	 * The main plugin directory.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $dir;
 
@@ -56,7 +56,7 @@ class De_grona_Ehdokas {
 	 * The plugin assets directory.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $assets_dir;
 
@@ -64,7 +64,7 @@ class De_grona_Ehdokas {
 	 * The plugin assets URL.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $assets_url;
 
@@ -72,14 +72,14 @@ class De_grona_Ehdokas {
 	 * Suffix for Javascripts.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $script_suffix;
 
 	/**
 	 * Constructor function.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function __construct ( $file = '', $version = PLUGIN_VERSION ) {
@@ -151,7 +151,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Load frontend CSS.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return void
 	 */
 	public function enqueue_styles () {
@@ -162,7 +162,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Load frontend Javascript.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function enqueue_scripts () {
@@ -173,7 +173,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Load admin CSS.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function admin_enqueue_styles ( $hook = '' ) {
@@ -184,7 +184,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Load admin Javascript.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function admin_enqueue_scripts ( $hook = '' ) {
@@ -195,7 +195,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Load plugin localisation
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function load_localisation () {
@@ -205,7 +205,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Load plugin textdomain
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function load_plugin_textdomain () {
@@ -222,7 +222,7 @@ class De_grona_Ehdokas {
 	 *
 	 * Ensures only one instance of De_grona_Ehdokas is loaded or can be loaded.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 * @static
 	 * @see De_grona_Ehdokas()
 	 * @return Main De_grona_Ehdokas instance
@@ -237,7 +237,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Cloning is forbidden.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function __clone () {
 		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?' ), $this->_version );
@@ -246,7 +246,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Unserializing instances of this class is forbidden.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function __wakeup () {
 		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?' ), $this->_version );
@@ -255,7 +255,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Installation. Runs on activation.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	public function install () {
@@ -265,7 +265,7 @@ class De_grona_Ehdokas {
 	/**
 	 * Log the plugin version number.
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 * @return  void
 	 */
 	private function _log_version_number () {

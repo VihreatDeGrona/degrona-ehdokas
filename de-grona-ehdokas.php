@@ -2,19 +2,19 @@
 /*
  * Plugin Name: De gröna Ehdokas
  * Version: 0.0.1
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: This is your starter template for your next WordPress plugin.
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
- * Requires at least: 4.0
+ * Plugin URI: https://github.com/ypcs/degrona-ehdokas
+ * Description: De Gröna Ehdokas
+ * Author: Janne Saarela
+ * Author URI: http://www.jannejuhani.net
+ * Requires at least: 3.9
  * Tested up to: 4.0
  *
  * Text Domain: de-grona-ehdokas
  * Domain Path: /lang/
  *
  * @package WordPress
- * @author Hugh Lashbrooke
- * @since 1.0.0
+ * @author Janne Saarela
+ * @since 0.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;

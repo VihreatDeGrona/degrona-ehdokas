@@ -24,7 +24,7 @@ class De_grona_Ehdokas_Settings {
 	 * Prefix for plugin settings.
 	 * @var     string
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $base = '';
 
@@ -32,7 +32,7 @@ class De_grona_Ehdokas_Settings {
 	 * Available settings for plugin.
 	 * @var     array
 	 * @access  public
-	 * @since   1.0.0
+	 * @since   0.0.1
 	 */
 	public $settings = array();
 
@@ -343,7 +343,7 @@ class De_grona_Ehdokas_Settings {
 	 *
 	 * Ensures only one instance of De_grona_Ehdokas_Settings is loaded or can be loaded.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 * @static
 	 * @see De_grona_Ehdokas()
 	 * @return Main De_grona_Ehdokas_Settings instance
@@ -358,7 +358,7 @@ class De_grona_Ehdokas_Settings {
 	/**
 	 * Cloning is forbidden.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function __clone () {
 		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?' ), $this->parent->_version );
@@ -367,7 +367,7 @@ class De_grona_Ehdokas_Settings {
 	/**
 	 * Unserializing instances of this class is forbidden.
 	 *
-	 * @since 1.0.0
+	 * @since 0.0.1
 	 */
 	public function __wakeup () {
 		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?' ), $this->parent->_version );
