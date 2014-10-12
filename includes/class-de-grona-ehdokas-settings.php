@@ -67,7 +67,7 @@ class De_grona_Ehdokas_Settings {
 	 * @return void
 	 */
 	public function add_menu_item () {
-		$page = add_options_page( __( 'Plugin Settings', 'de-grona-ehdokas' ) , __( 'Plugin Settings', 'de-grona-ehdokas' ) , 'manage_options' , $this->parent->_token . '_settings' ,  array( $this, 'settings_page' ) );
+		$page = add_menu_page( __( 'Plugin Settings', 'de-grona-ehdokas' ) , __( 'Candidate \'15', 'de-grona-ehdokas' ) , 'manage_options' , $this->parent->_token . '_settings' ,  array( $this, 'settings_page' ) );
 		add_action( 'admin_print_styles-' . $page, array( $this, 'settings_assets' ) );
 	}
 
@@ -77,17 +77,16 @@ class De_grona_Ehdokas_Settings {
 	 */
 	public function settings_assets () {
 
-		// We're including the farbtastic script & styles here because they're needed for the colour picker
-		// If you're not including a colour picker field then you can leave these calls out as well as the farbtastic dependency for the wpt-admin-js script below
-		wp_enqueue_style( 'farbtastic' );
-    	wp_enqueue_script( 'farbtastic' );
+       // // We're including the farbtastic script & styles here because they're needed for the colour picker
+       // // If you're not including a colour picker field then you can leave these calls out as well as the farbtastic dependency for the wpt-admin-js script below
+       // wp_enqueue_style( 'farbtastic' );
+       // wp_enqueue_script( 'farbtastic' );
+       // We're including the WP media scripts here because they're needed for the image upload field
+       wp_enqueue_media();
 
-    	// We're including the WP media scripts here because they're needed for the image upload field
-    	// If you're not including an image upload then you can leave this function call out
-    	wp_enqueue_media();
+       // wp_register_script( $this->parent->_token . '-settings-js', $this->parent->assets_url . 'js/settings' . $this->parent->script_suffix . '.js', array( 'farbtastic', 'jquery' ), PLUGIN_VERSION );
+       // wp_enqueue_script( $this->parent->_token . '-settings-js' );
 
-    	wp_register_script( $this->parent->_token . '-settings-js', $this->parent->assets_url . 'js/settings' . $this->parent->script_suffix . '.js', array( 'farbtastic', 'jquery' ), PLUGIN_VERSION );
-    	wp_enqueue_script( $this->parent->_token . '-settings-js' );
 	}
 
 	/**
@@ -189,13 +188,13 @@ class De_grona_Ehdokas_Settings {
 					'default'		=> '',
 					'placeholder'	=> __( '42', 'de-grona-ehdokas' )
 				),
-				array(
-					'id' 			=> 'colour_picker',
-					'label'			=> __( 'Pick a colour', 'de-grona-ehdokas' ),
-					'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'de-grona-ehdokas' ),
-					'type'			=> 'color',
-					'default'		=> '#21759B'
-				),
+				// array(
+				// 	'id' 			=> 'colour_picker',
+				// 	'label'			=> __( 'Pick a colour', 'de-grona-ehdokas' ),
+				// 	'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'de-grona-ehdokas' ),
+				// 	'type'			=> 'color',
+				// 	'default'		=> '#21759B'
+				// ),
 				array(
 					'id' 			=> 'an_image',
 					'label'			=> __( 'An Image' , 'de-grona-ehdokas' ),
