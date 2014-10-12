@@ -1,0 +1,3 @@
+# De gröna Ehdokas WP-plugin
+
+* Work in progress...
