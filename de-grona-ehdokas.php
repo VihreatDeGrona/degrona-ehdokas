@@ -20,6 +20,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 define( 'PLUGIN_VERSION', '0.0.1' );
+define( 'PLUGIN_TEXT_DOMAIN', 'de-grona-ehdokas' );
 
 // Load plugin class files
 require_once( 'includes/class-de-grona-ehdokas.php' );
@@ -27,8 +28,8 @@ require_once( 'includes/class-de-grona-ehdokas-settings.php' );
 
 // Load plugin libraries
 require_once( 'includes/lib/class-de-grona-ehdokas-admin-api.php' );
-require_once( 'includes/lib/class-de-grona-ehdokas-post-type.php' );
-require_once( 'includes/lib/class-de-grona-ehdokas-taxonomy.php' );
+// require_once( 'includes/lib/class-de-grona-ehdokas-post-type.php' );
+// require_once( 'includes/lib/class-de-grona-ehdokas-taxonomy.php' );
 
 /**
  * Returns the main instance of De_grona_Ehdokas to prevent the need to use globals.

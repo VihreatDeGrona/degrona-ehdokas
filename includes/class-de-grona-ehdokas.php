@@ -199,7 +199,7 @@ class De_grona_Ehdokas {
 	 * @return  void
 	 */
 	public function load_localisation () {
-		load_plugin_textdomain( 'de-grona-ehdokas', false, dirname( plugin_basename( $this->file ) ) . '/lang/' );
+		load_plugin_textdomain( PLUGIN_TEXT_DOMAIN, false, dirname( plugin_basename( $this->file ) ) . '/lang/' );
 	} // End load_localisation ()
 
 	/**
@@ -209,7 +209,7 @@ class De_grona_Ehdokas {
 	 * @return  void
 	 */
 	public function load_plugin_textdomain () {
-	    $domain = 'de-grona-ehdokas';
+	    $domain = PLUGIN_TEXT_DOMAIN;
 
 	    $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 
