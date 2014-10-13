@@ -67,7 +67,7 @@ class De_grona_Ehdokas_Settings {
 	 * @return void
 	 */
 	public function add_menu_item () {
-		$page = add_menu_page( __( 'Plugin Settings', 'de-grona-ehdokas' ) , __( 'Candidate \'15', 'de-grona-ehdokas' ) , 'manage_options' , $this->parent->_token . '_settings' ,  array( $this, 'settings_page' ) );
+		$page = add_menu_page( __( 'Candidate \'15 Settings', PLUGIN_TEXT_DOMAIN ) , __( 'Candidate \'15', PLUGIN_TEXT_DOMAIN ) , 'manage_options' , $this->parent->_token . '_settings' ,  array( $this, 'settings_page' ) );
 		add_action( 'admin_print_styles-' . $page, array( $this, 'settings_assets' ) );
 	}
 
@@ -77,15 +77,14 @@ class De_grona_Ehdokas_Settings {
 	 */
 	public function settings_assets () {
 
-       // // We're including the farbtastic script & styles here because they're needed for the colour picker
-       // // If you're not including a colour picker field then you can leave these calls out as well as the farbtastic dependency for the wpt-admin-js script below
-       // wp_enqueue_style( 'farbtastic' );
-       // wp_enqueue_script( 'farbtastic' );
+       // We're including the farbtastic script & styles here because they're needed for the colour picker
+       wp_enqueue_style( 'farbtastic' );
+       wp_enqueue_script( 'farbtastic' );
        // We're including the WP media scripts here because they're needed for the image upload field
        wp_enqueue_media();
 
-       // wp_register_script( $this->parent->_token . '-settings-js', $this->parent->assets_url . 'js/settings' . $this->parent->script_suffix . '.js', array( 'farbtastic', 'jquery' ), PLUGIN_VERSION );
-       // wp_enqueue_script( $this->parent->_token . '-settings-js' );
+       wp_register_script( $this->parent->_token . '-settings-js', $this->parent->assets_url . 'js/settings' . $this->parent->script_suffix . '.js', array( 'farbtastic', 'jquery' ), PLUGIN_VERSION );
+       wp_enqueue_script( $this->parent->_token . '-settings-js' );
 
 	}
 
@@ -95,7 +94,7 @@ class De_grona_Ehdokas_Settings {
 	 * @return array 		Modified links
 	 */
 	public function add_settings_link ( $links ) {
-		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'de-grona-ehdokas' ) . '</a>';
+		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', PLUGIN_TEXT_DOMAIN ) . '</a>';
   		array_push( $links, $settings_link );
   		return $links;
 	}
@@ -106,111 +105,175 @@ class De_grona_Ehdokas_Settings {
 	 */
 	private function settings_fields () {
 
-		$settings['standard'] = array(
-			'title'					=> __( 'Standard', 'de-grona-ehdokas' ),
-			'description'			=> __( 'These are fairly standard form input fields.', 'de-grona-ehdokas' ),
+		$settings['basic_info'] = array(
+			'title'					=> __( 'Candidate &amp; Site Info', PLUGIN_TEXT_DOMAIN ),
+			'description'			=> __( 'Basic information about yourself and site settings. This information is displayed on the site home page.', PLUGIN_TEXT_DOMAIN ),
 			'fields'				=> array(
 				array(
-					'id' 			=> 'text_field',
-					'label'			=> __( 'Some Text' , 'de-grona-ehdokas' ),
-					'description'	=> __( 'This is a standard text field.', 'de-grona-ehdokas' ),
+					'id' 			=> 'degrona15_candidate_name',
+					'label'			=> __( 'Your name' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your name.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'text',
 					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'de-grona-ehdokas' )
+					'placeholder'	=> __( 'George Hay', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
-					'id' 			=> 'password_field',
-					'label'			=> __( 'A Password' , 'de-grona-ehdokas' ),
-					'description'	=> __( 'This is a standard password field.', 'de-grona-ehdokas' ),
-					'type'			=> 'password',
-					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'de-grona-ehdokas' )
-				),
-				array(
-					'id' 			=> 'secret_text_field',
-					'label'			=> __( 'Some Secret Text' , 'de-grona-ehdokas' ),
-					'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'de-grona-ehdokas' ),
-					'type'			=> 'text_secret',
-					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'de-grona-ehdokas' )
-				),
-				array(
-					'id' 			=> 'text_block',
-					'label'			=> __( 'A Text Block' , 'de-grona-ehdokas' ),
-					'description'	=> __( 'This is a standard text area.', 'de-grona-ehdokas' ),
+					'id' 			=> 'degrona15_candidate_description',
+					'label'			=> __( 'Short description' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add short description about yourself.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'textarea',
 					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text for this textarea', 'de-grona-ehdokas' )
+					'placeholder'	=> __( 'I am George Hay, parliament election candidate from Toronto.', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
-					'id' 			=> 'single_checkbox',
-					'label'			=> __( 'An Option', 'de-grona-ehdokas' ),
-					'description'	=> __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'de-grona-ehdokas' ),
-					'type'			=> 'checkbox',
-					'default'		=> ''
-				),
-				array(
-					'id' 			=> 'select_box',
-					'label'			=> __( 'A Select Box', 'de-grona-ehdokas' ),
-					'description'	=> __( 'A standard select box.', 'de-grona-ehdokas' ),
-					'type'			=> 'select',
-					'options'		=> array( 'drupal' => 'Drupal', 'joomla' => 'Joomla', 'wordpress' => 'WordPress' ),
-					'default'		=> 'wordpress'
-				),
-				array(
-					'id' 			=> 'radio_buttons',
-					'label'			=> __( 'Some Options', 'de-grona-ehdokas' ),
-					'description'	=> __( 'A standard set of radio buttons.', 'de-grona-ehdokas' ),
-					'type'			=> 'radio',
-					'options'		=> array( 'superman' => 'Superman', 'batman' => 'Batman', 'ironman' => 'Iron Man' ),
-					'default'		=> 'batman'
-				),
-				array(
-					'id' 			=> 'multiple_checkboxes',
-					'label'			=> __( 'Some Items', 'de-grona-ehdokas' ),
-					'description'	=> __( 'You can select multiple items and they will be stored as an array.', 'de-grona-ehdokas' ),
-					'type'			=> 'checkbox_multi',
-					'options'		=> array( 'square' => 'Square', 'circle' => 'Circle', 'rectangle' => 'Rectangle', 'triangle' => 'Triangle' ),
-					'default'		=> array( 'circle', 'triangle' )
-				)
-			)
-		);
-
-		$settings['extra'] = array(
-			'title'					=> __( 'Extra', 'de-grona-ehdokas' ),
-			'description'			=> __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'de-grona-ehdokas' ),
-			'fields'				=> array(
-				array(
-					'id' 			=> 'number_field',
-					'label'			=> __( 'A Number' , 'de-grona-ehdokas' ),
-					'description'	=> __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'de-grona-ehdokas' ),
+					'id' 			=> 'degrona15_candidate_number',
+					'label'			=> __( 'Your candidate number' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your candidate number.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'number',
 					'default'		=> '',
-					'placeholder'	=> __( '42', 'de-grona-ehdokas' )
+					'placeholder'	=> __( '2', PLUGIN_TEXT_DOMAIN )
 				),
-				// array(
-				// 	'id' 			=> 'colour_picker',
-				// 	'label'			=> __( 'Pick a colour', 'de-grona-ehdokas' ),
-				// 	'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'de-grona-ehdokas' ),
-				// 	'type'			=> 'color',
-				// 	'default'		=> '#21759B'
-				// ),
 				array(
-					'id' 			=> 'an_image',
-					'label'			=> __( 'An Image' , 'de-grona-ehdokas' ),
-					'description'	=> __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'de-grona-ehdokas' ),
+					'id' 			=> 'degrona15_candidate_contact_information',
+					'label'			=> __( 'Contact information' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add contact information.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'textarea',
+					'default'		=> '',
+					'placeholder'	=> __( "George\ntel. 0123456789\nemail: george@hay.com", PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_image',
+					'label'			=> __( 'Your image' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add you candidate image.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'image',
 					'default'		=> '',
 					'placeholder'	=> ''
 				),
 				array(
-					'id' 			=> 'multi_select_box',
-					'label'			=> __( 'A Multi-Select Box', 'de-grona-ehdokas' ),
-					'description'	=> __( 'A standard multi-select box - the saved data is stored as an array.', 'de-grona-ehdokas' ),
-					'type'			=> 'select_multi',
-					'options'		=> array( 'linux' => 'Linux', 'mac' => 'Mac', 'windows' => 'Windows' ),
-					'default'		=> array( 'linux' )
+					'id' 			=> 'degrona15_candidate_site_jumbotron',
+					'label'			=> __( 'Home page background image' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add you home page background image.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'image',
+					'default'		=> '',
+					'placeholder'	=> ''
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_join_the_campaign_url',
+					'label'			=> __( '"Join the campaign page url"' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your "Join the campaign url".', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( 'http://www.yousite.com/join-the-campaign', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_donate_url',
+					'label'			=> __( 'Donate page url' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your donate page url.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( 'http://www.donateme.com/myname', PLUGIN_TEXT_DOMAIN )
 				)
+				// array(
+				// 	'id' 			=> 'single_checkbox',
+				// 	'label'			=> __( 'An Option', PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'checkbox',
+				// 	'default'		=> ''
+				// ),
+				// array(
+				// 	'id' 			=> 'password_field',
+				// 	'label'			=> __( 'A Password' , PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'This is a standard password field.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'password',
+				// 	'default'		=> '',
+				// 	'placeholder'	=> __( 'Placeholder text', PLUGIN_TEXT_DOMAIN )
+				// ),
+				// array(
+				// 	'id' 			=> 'secret_text_field',
+				// 	'label'			=> __( 'Some Secret Text' , PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'text_secret',
+				// 	'default'		=> '',
+				// 	'placeholder'	=> __( 'Placeholder text', PLUGIN_TEXT_DOMAIN )
+				// ),
+				// array(
+				// 	'id' 			=> 'select_box',
+				// 	'label'			=> __( 'A Select Box', PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'A standard select box.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'select',
+				// 	'options'		=> array( 'drupal' => 'Drupal', 'joomla' => 'Joomla', 'wordpress' => 'WordPress' ),
+				// 	'default'		=> 'wordpress'
+				// ),
+				// array(
+				// 	'id' 			=> 'radio_buttons',
+				// 	'label'			=> __( 'Some Options', PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'A standard set of radio buttons.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'radio',
+				// 	'options'		=> array( 'superman' => 'Superman', 'batman' => 'Batman', 'ironman' => 'Iron Man' ),
+				// 	'default'		=> 'batman'
+				// ),
+				// array(
+				// 	'id' 			=> 'multiple_checkboxes',
+				// 	'label'			=> __( 'Some Items', PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'You can select multiple items and they will be stored as an array.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'checkbox_multi',
+				// 	'options'		=> array( 'square' => 'Square', 'circle' => 'Circle', 'rectangle' => 'Rectangle', 'triangle' => 'Triangle' ),
+				// 	'default'		=> array( 'circle', 'triangle' )
+				// )
+			)
+		);
+
+		$settings['social_media'] = array(
+			'title'					=> __( 'Social Media', PLUGIN_TEXT_DOMAIN ),
+			'description'			=> __( 'Add your social media site links here and your site will use them automatically.', PLUGIN_TEXT_DOMAIN ),
+			'fields'				=> array(
+				array(
+					'id' 			=> 'degrona15_candidate_facebook_page_id',
+					'label'			=> __( 'Your Facebook-page ID' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your Facebook-page ID.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( '00123456789', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_twitter_username',
+					'label'			=> __( 'Your Twitter username' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your Twitter username.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( 'username', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_instagram_username',
+					'label'			=> __( 'Your Instagram username' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your Instagram username.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( 'username', PLUGIN_TEXT_DOMAIN )
+				),
+				// array(
+				// 	'id' 			=> 'colour_picker',
+				// 	'label'			=> __( 'Pick a colour', PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'color',
+				// 	'default'		=> '#21759B'
+				// ),
+				// array(
+				// 	'id' 			=> 'an_image',
+				// 	'label'			=> __( 'An Image' , PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'image',
+				// 	'default'		=> '',
+				// 	'placeholder'	=> ''
+				// ),
+				// array(
+				// 	'id' 			=> 'multi_select_box',
+				// 	'label'			=> __( 'A Multi-Select Box', PLUGIN_TEXT_DOMAIN ),
+				// 	'description'	=> __( 'A standard multi-select box - the saved data is stored as an array.', PLUGIN_TEXT_DOMAIN ),
+				// 	'type'			=> 'select_multi',
+				// 	'options'		=> array( 'linux' => 'Linux', 'mac' => 'Mac', 'windows' => 'Windows' ),
+				// 	'default'		=> array( 'linux' )
+				// )
 			)
 		);
 
@@ -277,7 +340,7 @@ class De_grona_Ehdokas_Settings {
 
 		// Build page HTML
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
-			$html .= '<h2>' . __( 'Plugin Settings' , 'de-grona-ehdokas' ) . '</h2>' . "\n";
+			$html .= '<h2>' . __( 'Candidate \'15 Settings' , PLUGIN_TEXT_DOMAIN ) . '</h2>' . "\n";
 
 			$tab = '';
 			if( isset( $_GET['tab'] ) && $_GET['tab'] ) {
@@ -290,8 +353,8 @@ class De_grona_Ehdokas_Settings {
 				$html .= '<h2 class="nav-tab-wrapper">' . "\n";
 
 				$c = 0;
-				foreach( $this->settings as $section => $data ) {
 
+				foreach( $this->settings as $section => $data ) {
 					// Set tab class
 					$class = 'nav-tab';
 					if( ! isset( $_GET['tab'] ) ) {
@@ -329,12 +392,17 @@ class De_grona_Ehdokas_Settings {
 
 				$html .= '<p class="submit">' . "\n";
 					$html .= '<input type="hidden" name="tab" value="' . esc_attr( $tab ) . '" />' . "\n";
-					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings' , 'de-grona-ehdokas' ) ) . '" />' . "\n";
+					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings' , PLUGIN_TEXT_DOMAIN ) ) . '" />' . "\n";
 				$html .= '</p>' . "\n";
 			$html .= '</form>' . "\n";
 		$html .= '</div>' . "\n";
 
 		echo $html;
+
+		// Debug
+		// echo '<pre>';
+		// print_r($this->settings);
+		// echo '</pre>';
 	}
 
 	/**
