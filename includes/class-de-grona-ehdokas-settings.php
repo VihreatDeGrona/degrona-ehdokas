@@ -140,14 +140,6 @@ class De_grona_Ehdokas_Settings {
 					'type'			=> 'image',
 					'default'		=> '',
 					'placeholder'	=> ''
-				),
-				array(
-					'id' 			=> 'degrona15_candidate_site_jumbotron',
-					'label'			=> __( 'Home page background image' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add you home page background image.', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'image',
-					'default'		=> '',
-					'placeholder'	=> ''
 				)
 				// array(
 				// 	'id' 			=> 'single_checkbox',
@@ -264,6 +256,14 @@ class De_grona_Ehdokas_Settings {
 					'type'			=> 'textarea',
 					'default'		=> '',
 					'placeholder'	=> __( "George\ntel. 0123456789\nemail: george@hay.com", PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_site_jumbotron',
+					'label'			=> __( 'Home page background image' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add you home page background image.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'image',
+					'default'		=> '',
+					'placeholder'	=> ''
 				),
 				array(
 					'id' 			=> 'degrona15_candidate_join_the_campaign_url',
