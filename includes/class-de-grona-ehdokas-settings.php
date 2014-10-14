@@ -2,10 +2,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class De_grona_Ehdokas_Settings {
+class De_Grona_Ehdokas_Settings {
 
 	/**
-	 * The single instance of De_grona_Ehdokas_Settings.
+	 * The single instance of De_Grona_Ehdokas_Settings.
 	 * @var 	object
 	 * @access  private
 	 * @since 	1.0.0
@@ -353,7 +353,7 @@ class De_grona_Ehdokas_Settings {
 	public function settings_page () {
 
 		// Delete degrona15_candidate_transient if user update data in candidate_info -page
-		if ( isset( $_GET['settings-updated'] ) && isset( $_GET['tab'] ) && $_GET['tab'] == 'candidate_info') {
+		if ( isset( $_GET['settings-updated'] ) && ( isset( $_GET['tab'] ) && $_GET['tab'] == 'candidate_info' || isset( $_GET['page'] ) && !isset( $_GET['tab'] ) && $_GET['page'] == 'de_grona_ehdokas_settings' ) )  {
 			delete_transient( 'degrona15_candidate_transient' );
 		}
 		// Build page HTML
@@ -424,14 +424,14 @@ class De_grona_Ehdokas_Settings {
 	}
 
 	/**
-	 * Main De_grona_Ehdokas_Settings Instance
+	 * Main De_Grona_Ehdokas_Settings Instance
 	 *
-	 * Ensures only one instance of De_grona_Ehdokas_Settings is loaded or can be loaded.
+	 * Ensures only one instance of De_Grona_Ehdokas_Settings is loaded or can be loaded.
 	 *
 	 * @since 0.0.1
 	 * @static
-	 * @see De_grona_Ehdokas()
-	 * @return Main De_grona_Ehdokas_Settings instance
+	 * @see De_Grona_Ehdokas()
+	 * @return Main De_Grona_Ehdokas_Settings instance
 	 */
 	public static function instance ( $parent ) {
 		if ( is_null( self::$_instance ) ) {
