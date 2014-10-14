@@ -32,19 +32,19 @@ require_once( 'includes/lib/class-de-grona-ehdokas-admin-api.php' );
 // require_once( 'includes/lib/class-de-grona-ehdokas-taxonomy.php' );
 
 /**
- * Returns the main instance of De_grona_Ehdokas to prevent the need to use globals.
+ * Returns the main instance of De_Grona_Ehdokas to prevent the need to use globals.
  *
  * @since  1.0.0
- * @return object De_grona_Ehdokas
+ * @return object De_Grona_Ehdokas
  */
-function De_grona_Ehdokas () {
-	$instance = De_grona_Ehdokas::instance( __FILE__, PLUGIN_VERSION );
+function De_Grona_Ehdokas () {
+	$instance = De_Grona_Ehdokas::instance( __FILE__, PLUGIN_VERSION );
 
 	if( is_null( $instance->settings ) ) {
-		$instance->settings = De_grona_Ehdokas_Settings::instance( $instance );
+		$instance->settings = De_Grona_Ehdokas_Settings::instance( $instance );
 	}
 
 	return $instance;
 }
 
-De_grona_Ehdokas();
+De_Grona_Ehdokas();

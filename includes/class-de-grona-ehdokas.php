@@ -2,10 +2,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class De_grona_Ehdokas {
+class De_Grona_Ehdokas {
 
 	/**
-	 * The single instance of De_grona_Ehdokas.
+	 * The single instance of De_Grona_Ehdokas.
 	 * @var 	object
 	 * @access  private
 	 * @since 	1.0.0
@@ -106,7 +106,7 @@ class De_grona_Ehdokas {
 
 		// Load API for generic admin functions
 		if( is_admin() ) {
-			$this->admin = new De_grona_Ehdokas_Admin_API();
+			$this->admin = new De_Grona_Ehdokas_Admin_API();
 		}
 
 		// Handle localisation
@@ -126,7 +126,7 @@ class De_grona_Ehdokas {
 
 		if( ! $post_type || ! $plural || ! $single ) return;
 
-		$post_type = new De_grona_Ehdokas_Post_Type( $post_type, $plural, $single, $description );
+		$post_type = new De_Grona_Ehdokas_Post_Type( $post_type, $plural, $single, $description );
 
 		return $post_type;
 	}
@@ -143,7 +143,7 @@ class De_grona_Ehdokas {
 
 		if( ! $taxonomy || ! $plural || ! $single ) return;
 
-		$taxonomy = new De_grona_Ehdokas_Taxonomy( $taxonomy, $plural, $single, $post_types );
+		$taxonomy = new De_Grona_Ehdokas_Taxonomy( $taxonomy, $plural, $single, $post_types );
 
 		return $taxonomy;
 	}
@@ -218,14 +218,14 @@ class De_grona_Ehdokas {
 	} // End load_plugin_textdomain ()
 
 	/**
-	 * Main De_grona_Ehdokas Instance
+	 * Main De_Grona_Ehdokas Instance
 	 *
-	 * Ensures only one instance of De_grona_Ehdokas is loaded or can be loaded.
+	 * Ensures only one instance of De_Grona_Ehdokas is loaded or can be loaded.
 	 *
 	 * @since 0.0.1
 	 * @static
-	 * @see De_grona_Ehdokas()
-	 * @return Main De_grona_Ehdokas instance
+	 * @see De_Grona_Ehdokas()
+	 * @return Main De_Grona_Ehdokas instance
 	 */
 	public static function instance ( $file = '', $version = PLUGIN_VERSION ) {
 		if ( is_null( self::$_instance ) ) {

@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class De_grona_Ehdokas_Post_Type {
+class De_Grona_Ehdokas_Post_Type {
 
 	/**
 	 * The name for the custom post type.

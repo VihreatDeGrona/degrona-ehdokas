@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class De_grona_Ehdokas_Taxonomy {
+class De_Grona_Ehdokas_Taxonomy {
 
 	/**
 	 * The name for the taxonomy.

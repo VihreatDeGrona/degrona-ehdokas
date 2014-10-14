@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class De_grona_Ehdokas_Admin_API {
+class De_Grona_Ehdokas_Admin_API {
 
 	/**
 	 * Constructor function
