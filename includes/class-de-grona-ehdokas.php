@@ -272,4 +272,20 @@ class De_grona_Ehdokas {
 		update_option( $this->_token . '_version', $this->_version );
 	} // End _log_version_number ()
 
+	/**
+	 * Get data from plugin options
+	 * @param  string $field Field data
+	 * @return mixed
+	 */
+	public function get_candidate_data ( $field ) {
+		// Add prefix
+		$option_name = $this->settings->base;
+		// Add requested field
+		$option_name .= $field;
+		// Get saved field data and return it
+		$option = get_option( $option_name );
+		if ( $option ) return $option;
+		else return __( 'No luck this time!', PLUGIN_TEXT_DOMAIN );
+	}
+
 }
