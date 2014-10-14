@@ -105,9 +105,9 @@ class De_grona_Ehdokas_Settings {
 	 */
 	private function settings_fields () {
 
-		$settings['basic_info'] = array(
-			'title'					=> __( 'Candidate &amp; Site Info', PLUGIN_TEXT_DOMAIN ),
-			'description'			=> __( 'Basic information about yourself and site settings. This information is displayed on the site home page.', PLUGIN_TEXT_DOMAIN ),
+		$settings['candidate_info'] = array(
+			'title'					=> __( 'Candidate Info', PLUGIN_TEXT_DOMAIN ),
+			'description'			=> __( 'Basic information about yourself. This information is displayed on the site home page.', PLUGIN_TEXT_DOMAIN ),
 			'fields'				=> array(
 				array(
 					'id' 			=> 'degrona15_candidate_name',
@@ -134,14 +134,6 @@ class De_grona_Ehdokas_Settings {
 					'placeholder'	=> __( '2', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
-					'id' 			=> 'degrona15_candidate_contact_information',
-					'label'			=> __( 'Contact information' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add contact information.', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'textarea',
-					'default'		=> '',
-					'placeholder'	=> __( "George\ntel. 0123456789\nemail: george@hay.com", PLUGIN_TEXT_DOMAIN )
-				),
-				array(
 					'id' 			=> 'degrona15_candidate_image',
 					'label'			=> __( 'Your image' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add you candidate image.', PLUGIN_TEXT_DOMAIN ),
@@ -156,22 +148,6 @@ class De_grona_Ehdokas_Settings {
 					'type'			=> 'image',
 					'default'		=> '',
 					'placeholder'	=> ''
-				),
-				array(
-					'id' 			=> 'degrona15_candidate_join_the_campaign_url',
-					'label'			=> __( '"Join the campaign page url"' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add your "Join the campaign url".', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'text',
-					'default'		=> '',
-					'placeholder'	=> __( 'http://www.yousite.com/join-the-campaign', PLUGIN_TEXT_DOMAIN )
-				),
-				array(
-					'id' 			=> 'degrona15_candidate_donate_url',
-					'label'			=> __( 'Donate page url' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add your donate page url.', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'text',
-					'default'		=> '',
-					'placeholder'	=> __( 'http://www.donateme.com/myname', PLUGIN_TEXT_DOMAIN )
 				)
 				// array(
 				// 	'id' 			=> 'single_checkbox',
@@ -224,8 +200,8 @@ class De_grona_Ehdokas_Settings {
 		);
 
 		$settings['social_media'] = array(
-			'title'					=> __( 'Social Media', PLUGIN_TEXT_DOMAIN ),
-			'description'			=> __( 'Add your social media site links here and your site will use them automatically.', PLUGIN_TEXT_DOMAIN ),
+			'title'					=> __( 'Social Media Info', PLUGIN_TEXT_DOMAIN ),
+			'description'			=> __( 'Add your social media username and page information here and your site will use them automatically.', PLUGIN_TEXT_DOMAIN ),
 			'fields'				=> array(
 				array(
 					'id' 			=> 'degrona15_candidate_facebook_page_id',
@@ -274,6 +250,37 @@ class De_grona_Ehdokas_Settings {
 				// 	'options'		=> array( 'linux' => 'Linux', 'mac' => 'Mac', 'windows' => 'Windows' ),
 				// 	'default'		=> array( 'linux' )
 				// )
+			)
+		);
+
+		$settings['other_info'] = array(
+			'title'					=> __( 'Other Info', PLUGIN_TEXT_DOMAIN ),
+			'description'			=> __( 'Other settings. This information is displayed on the site.', PLUGIN_TEXT_DOMAIN ),
+			'fields'				=> array(
+				array(
+					'id' 			=> 'degrona15_candidate_contact_information',
+					'label'			=> __( 'Your contact information' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add contact information.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'textarea',
+					'default'		=> '',
+					'placeholder'	=> __( "George\ntel. 0123456789\nemail: george@hay.com", PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_join_the_campaign_url',
+					'label'			=> __( 'Join the campaign page url' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your "Join the campaign url".', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( 'http://www.yousite.com/join-the-campaign', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_donate_url',
+					'label'			=> __( 'Donate page url' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your donate page url.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> '',
+					'placeholder'	=> __( 'http://www.donateme.com/myname', PLUGIN_TEXT_DOMAIN )
+				)
 			)
 		);
 
