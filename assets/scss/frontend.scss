@@ -6,12 +6,15 @@ $small-box-shadow: 0 0 2px rgba(10, 10, 10, .5);
 .de_grona_candidate_jumbotron{
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 1rem;
 }
 .de_grona_candidate_wrap{
   @include vendor-prefix('box-sizing', 'border-box');
   margin: 0 auto;
   max-width: 80rem;
-  padding: 1rem;
+  padding: 0 1rem;
   width: 100%;
   *, *:before, *:after {
     @include vendor-prefix('box-sizing', 'border-box');
@@ -22,11 +25,15 @@ $small-box-shadow: 0 0 2px rgba(10, 10, 10, .5);
   > section {
     width: 50%;
     @include breakpoint-to(medium-screens) {
-      margin: 1rem 0 0;
+      &:not(:first-of-type){
+        margin: 1rem 0 0;
+      }
       width: 100%;
     }
     @include breakpoint-to(small-screens){
-      margin: 1rem 0 0;
+      &:not(:first-of-type){
+        margin: 1rem 0 0;
+      }
       width: 100%;
     }
   }
@@ -76,8 +83,8 @@ $small-box-shadow: 0 0 2px rgba(10, 10, 10, .5);
     }
   }
   .de_grona_candidate_img{
-    img{
-      @include vendor-prefix('box-shadow', $small-box-shadow);
+    img {
+      max-height: 500px;
     }
   }
 }

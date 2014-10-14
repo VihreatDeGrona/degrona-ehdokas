@@ -1,6 +1,9 @@
 .de_grona_candidate_jumbotron {
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 1rem; }
 
 .de_grona_candidate_wrap {
   -webkit-box-sizing: border-box;
@@ -10,7 +13,7 @@
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 80rem;
-  padding: 1rem;
+  padding: 0 1rem;
   width: 100%; }
   .de_grona_candidate_wrap *, .de_grona_candidate_wrap *:before, .de_grona_candidate_wrap *:after {
     -webkit-box-sizing: border-box;
@@ -24,12 +27,14 @@
     width: 50%; }
     @media only screen and (min-width: 421px) and (max-width: 899px) {
       .de_grona_candidate_wrap > section {
-        margin: 1rem 0 0;
-        width: 100%; } }
+        width: 100%; }
+        .de_grona_candidate_wrap > section:not(:first-of-type) {
+          margin: 1rem 0 0; } }
     @media only screen and (max-width: 420px) {
       .de_grona_candidate_wrap > section {
-        margin: 1rem 0 0;
-        width: 100%; } }
+        width: 100%; }
+        .de_grona_candidate_wrap > section:not(:first-of-type) {
+          margin: 1rem 0 0; } }
   .de_grona_candidate_wrap:before, .de_grona_candidate_wrap:after {
     content: " ";
     display: table; }
@@ -83,11 +88,7 @@
       font-size: 250%;
       text-shadow: 0 0px 1px #464646; }
   .de_grona_candidate_wrap .de_grona_candidate_img img {
-    -webkit-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
-    -moz-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
-    -ms-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
-    -o-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
-    box-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
+    max-height: 500px; }
 
 .columns {
   float: left;
