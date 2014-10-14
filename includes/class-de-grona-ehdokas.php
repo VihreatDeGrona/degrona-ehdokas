@@ -335,14 +335,19 @@ class De_grona_Ehdokas {
 
 			// If image is set, retrieve the src url
 			if ( $data[ $fields['image'] ] ) {
-				$image_thumb = wp_get_attachment_thumb_url( $data[ $fields['image'] ] );
+				$image_thumb = wp_get_attachment_image_src( $data[ $fields['image'] ], 'large' );
+
 			}
 
-			$html .= '<div class="de_grona_candidate_wrap">';
+			$html .= '<div class="de_grona_candidate_wrap row">';
+			$html .= '<section class="de_grona_candidate_info large-6 columns">';
 			$html .= !empty( $data[ $fields['name'] ] ) ? '<h1>' . $data[ $fields['name'] ] . '</h1>' : '';
 			$html .= !empty( $data[ $fields['description'] ] ) ? '<p>' . $data[ $fields['description'] ] . '</p>' : '';
-			$html .= !empty( $data[ $fields['number'] ] ) ? '<figure class="de_grona_candidate_number"><span>' . $data[ $fields['number'] ] . '</span></figure>' : '';
-			$html .= !empty( $image_thumb ) ? '<figure class="de_grona_candidate_img"><img src="' . $image_thumb . '"></figure>' : '';
+			$html .= !empty( $data[ $fields['number'] ] ) ? '<figure class="de_grona_candidate_number"><div class="wrap"><span>' . $data[ $fields['number'] ] . '</span></div></figure>' : '';
+			$html .= '</section>';
+			$html .= '<section class="de_grona_candidate_image large-6 columns">';
+			$html .= !empty( $image_thumb ) ? '<figure class="de_grona_candidate_img"><img src="' . $image_thumb[0] . '"></figure>' : '';
+			$html .= '</section>';
 			$html .= '</div>';
 		endif;
 
