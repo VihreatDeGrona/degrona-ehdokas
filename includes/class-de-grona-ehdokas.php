@@ -274,7 +274,14 @@ class De_grona_Ehdokas {
 
 	/**
 	 * Get data from plugin options
+	 * <code>
+	 * <?php
+	 * $value = get_candidate_data( 'field' );
+	 * if ( $value ) { // do something }
+	 * ?>
+	 * </code>
 	 * @param  string $field Field data
+	 * @since   0.0.1
 	 * @return mixed
 	 */
 	public function get_candidate_data ( $field ) {
@@ -282,14 +289,16 @@ class De_grona_Ehdokas {
 		$option_name = $this->settings->base;
 		// Add requested field
 		$option_name .= $field;
-		// Get saved field data and return it
+		// Get saved field data
 		$option = get_option( $option_name );
-		if ( $option ) return $option;
-		else return __( 'No luck this time!', PLUGIN_TEXT_DOMAIN );
+		// Return data, if data not found $option is false
+		return $option;
 	} // End get_candidate_data ()
 
 	/**
 	 * Generate HTML for displaying home page candidate info from "Candidate Info"-data
+	 * @since   0.0.1
+	 * @todo cache $data[$value] = get_option( $value ) and renew if user updates any data in candidate info page
 	 * @return string
 	 */
 	public function get_candidate_home_page_data ( ) {
@@ -307,7 +316,6 @@ class De_grona_Ehdokas {
 		$data = null;
 
 		// Get data based on fields
-		// TODO: cache this and renew if user updates any data in candidate info page
 		foreach ($fields as $key => $value) {
 			$data[$value] = get_option( $value );
 		}
