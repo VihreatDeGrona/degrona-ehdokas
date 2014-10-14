@@ -114,7 +114,7 @@ class De_grona_Ehdokas_Settings {
 					'label'			=> __( 'Your name' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add your name.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'text',
-					'default'		=> '',
+					'default'		=> __( 'George Hay', PLUGIN_TEXT_DOMAIN ),
 					'placeholder'	=> __( 'George Hay', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
@@ -122,16 +122,16 @@ class De_grona_Ehdokas_Settings {
 					'label'			=> __( 'Short description' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add short description about yourself.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'textarea',
-					'default'		=> '',
+					'default'		=> __( 'I am George Hay, parliament election candidate from Toronto.', PLUGIN_TEXT_DOMAIN ),
 					'placeholder'	=> __( 'I am George Hay, parliament election candidate from Toronto.', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
 					'id' 			=> 'degrona15_candidate_number',
 					'label'			=> __( 'Your candidate number' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add your candidate number.', PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your candidate number. Leave blank if you don\'t know it at the moment.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'number',
 					'default'		=> '',
-					'placeholder'	=> __( '2', PLUGIN_TEXT_DOMAIN )
+					'placeholder'	=> ''
 				),
 				array(
 					'id' 			=> 'degrona15_candidate_image',
@@ -140,6 +140,13 @@ class De_grona_Ehdokas_Settings {
 					'type'			=> 'image',
 					'default'		=> '',
 					'placeholder'	=> ''
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_enable_home_page',
+					'label'			=> __( 'Show candidate info on home page?', PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Check if you want to show your candidate details on home page.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'checkbox',
+					'default'		=> ''
 				)
 				// array(
 				// 	'id' 			=> 'single_checkbox',
