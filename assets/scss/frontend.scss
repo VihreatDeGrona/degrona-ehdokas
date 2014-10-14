@@ -1,0 +1,96 @@
+@import 'mixins';
+@import 'colors';
+
+$small-box-shadow: 0 0 2px rgba(10, 10, 10, .5);
+
+.de_grona_candidate_jumbotron{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.de_grona_candidate_wrap{
+  @include vendor-prefix('box-sizing', 'border-box');
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 1rem;
+  width: 100%;
+  *, *:before, *:after {
+    @include vendor-prefix('box-sizing', 'border-box');
+  }
+  img{
+    max-width: 100%;
+  }
+  > section {
+    width: 50%;
+    @include breakpoint-to(medium-screens) {
+      margin: 1rem 0 0;
+      width: 100%;
+    }
+    @include breakpoint-to(small-screens){
+      margin: 1rem 0 0;
+      width: 100%;
+    }
+  }
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  .de_grona_candidate_info{
+    background-color: $basic_bg_color;
+    background-color: $basic_bg_color_alpha;
+    padding: 1rem;
+    @include vendor-prefix('box-shadow', $small-box-shadow);
+    h1{
+      font-size: 250%;
+    }
+  }
+  .de_grona_candidate_number{
+    background-color: $vihreat_de_grona_green;
+    border-radius: 100%;
+    @include vendor-prefix('box-shadow', 'inset 0 0 15px rgba(10, 10, 10, 0.5)');
+    color: white;
+    height: 15vw;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    width: 15vw;
+    @include preserve-threedee;
+    @include breakpoint-to(small-screens) {
+      height: 30vw;
+      width: 30vw;
+    }
+    @include breakpoint-to(medium-screens) {
+      height: 25vw;
+      width: 25vw;
+    }
+    .wrap{
+      @include vertical-align;
+    }
+    span{
+      font-size: 250%;
+      text-shadow: 0 0px 1px rgb(70, 70, 70);
+    }
+  }
+  .de_grona_candidate_img{
+    img{
+      @include vendor-prefix('box-shadow', $small-box-shadow);
+    }
+  }
+}
+.columns{
+  float: left;
+  padding: 0 0.83333rem;
+  width: 100%;
+  @include breakpoint-to(medium-screens) {
+    float:none;
+    padding: 0;
+  }
+  @include breakpoint-to(small-screens) {
+    float:none;
+    padding: 0;
+  }
+}

@@ -1,0 +1,103 @@
+.de_grona_candidate_jumbotron {
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.de_grona_candidate_wrap {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 1rem;
+  width: 100%; }
+  .de_grona_candidate_wrap *, .de_grona_candidate_wrap *:before, .de_grona_candidate_wrap *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+  .de_grona_candidate_wrap img {
+    max-width: 100%; }
+  .de_grona_candidate_wrap > section {
+    width: 50%; }
+    @media only screen and (min-width: 421px) and (max-width: 899px) {
+      .de_grona_candidate_wrap > section {
+        margin: 1rem 0 0;
+        width: 100%; } }
+    @media only screen and (max-width: 420px) {
+      .de_grona_candidate_wrap > section {
+        margin: 1rem 0 0;
+        width: 100%; } }
+  .de_grona_candidate_wrap:before, .de_grona_candidate_wrap:after {
+    content: " ";
+    display: table; }
+  .de_grona_candidate_wrap:after {
+    clear: both; }
+  .de_grona_candidate_wrap .de_grona_candidate_info {
+    background-color: #f0f0f0;
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 1rem;
+    -webkit-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    -moz-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    -ms-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    -o-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    box-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
+    .de_grona_candidate_wrap .de_grona_candidate_info h1 {
+      font-size: 250%; }
+  .de_grona_candidate_wrap .de_grona_candidate_number {
+    background-color: #61bf1a;
+    border-radius: 100%;
+    -webkit-box-shadow: inset 0 0 15px rgba(10, 10, 10, 0.5);
+    -moz-box-shadow: inset 0 0 15px rgba(10, 10, 10, 0.5);
+    -ms-box-shadow: inset 0 0 15px rgba(10, 10, 10, 0.5);
+    -o-box-shadow: inset 0 0 15px rgba(10, 10, 10, 0.5);
+    box-shadow: inset 0 0 15px rgba(10, 10, 10, 0.5);
+    color: white;
+    height: 15vw;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    width: 15vw;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    @media only screen and (max-width: 420px) {
+      .de_grona_candidate_wrap .de_grona_candidate_number {
+        height: 30vw;
+        width: 30vw; } }
+    @media only screen and (min-width: 421px) and (max-width: 899px) {
+      .de_grona_candidate_wrap .de_grona_candidate_number {
+        height: 25vw;
+        width: 25vw; } }
+    .de_grona_candidate_wrap .de_grona_candidate_number .wrap {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .de_grona_candidate_wrap .de_grona_candidate_number span {
+      font-size: 250%;
+      text-shadow: 0 0px 1px #464646; }
+  .de_grona_candidate_wrap .de_grona_candidate_img img {
+    -webkit-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    -moz-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    -ms-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    -o-box-shadow: 0 0 2px rgba(10, 10, 10, 0.5);
+    box-shadow: 0 0 2px rgba(10, 10, 10, 0.5); }
+
+.columns {
+  float: left;
+  padding: 0 0.83333rem;
+  width: 100%; }
+  @media only screen and (min-width: 421px) and (max-width: 899px) {
+    .columns {
+      float: none;
+      padding: 0; } }
+  @media only screen and (max-width: 420px) {
+    .columns {
+      float: none;
+      padding: 0; } }
