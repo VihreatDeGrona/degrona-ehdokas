@@ -352,6 +352,10 @@ class De_grona_Ehdokas_Settings {
 	 */
 	public function settings_page () {
 
+		// Delete degrona15_candidate_transient if user update data in candidate_info -page
+		if ( isset( $_GET['settings-updated'] ) && isset( $_GET['tab'] ) && $_GET['tab'] == 'candidate_info') {
+			delete_transient( 'degrona15_candidate_transient' );
+		}
 		// Build page HTML
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
 			$html .= '<h2>' . __( 'Candidate \'15 Settings' , PLUGIN_TEXT_DOMAIN ) . '</h2>' . "\n";

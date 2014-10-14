@@ -313,12 +313,21 @@ class De_grona_Ehdokas {
 			);
 
 		$html = '';
-		$data = null;
 
-		// Get data based on fields
-		foreach ($fields as $key => $value) {
-			$data[$value] = get_option( $value );
-		}
+		// Get transient
+		$data = get_transient( 'degrona15_candidate_transient' );
+
+		// If transient is not set, get data from db and set transient
+		if ( ! $data ) :
+
+			// Get data based on fields
+			foreach ($fields as $key => $value) {
+				$data[$value] = get_option( $value );
+			}
+
+			set_transient( 'degrona15_candidate_transient', $data, 0 );
+
+		endif;
 
 		// If user has enabled candidate info on home page, generate html
 		if ( $data[ $fields['enable'] ] ) :
