@@ -286,6 +286,50 @@ class De_grona_Ehdokas {
 		$option = get_option( $option_name );
 		if ( $option ) return $option;
 		else return __( 'No luck this time!', PLUGIN_TEXT_DOMAIN );
-	}
+	} // End get_candidate_data ()
+
+	/**
+	 * Generate HTML for displaying home page candidate info from "Candidate Info"-data
+	 * @return string
+	 */
+	public function get_candidate_home_page_data ( ) {
+
+		// Add default data fields in array
+		$fields = array(
+			'name' => $this->settings->base . 'degrona15_candidate_name',
+			'description' => $this->settings->base . 'degrona15_candidate_description',
+			'number' => $this->settings->base . 'degrona15_candidate_number',
+			'image' => $this->settings->base . 'degrona15_candidate_image',
+			'enable' => $this->settings->base . 'degrona15_candidate_enable_home_page'
+			);
+
+		$html = '';
+		$data = null;
+
+		// Get data based on fields
+		// TODO: cache this and renew if user updates any data in candidate info page
+		foreach ($fields as $key => $value) {
+			$data[$value] = get_option( $value );
+		}
+
+		// If user has enabled candidate info on home page, generate html
+		if ( $data[ $fields['enable'] ] ) :
+			$image_thumb = '';
+
+			// If image is set, retrieve the src url
+			if ( $data[ $fields['image'] ] ) {
+				$image_thumb = wp_get_attachment_thumb_url( $data[ $fields['image'] ] );
+			}
+
+			$html .= '<div class="de_grona_candidate_wrap">';
+			$html .= !empty( $data[ $fields['name'] ] ) ? '<h1>' . $data[ $fields['name'] ] . '</h1>' : '';
+			$html .= !empty( $data[ $fields['description'] ] ) ? '<p>' . $data[ $fields['description'] ] . '</p>' : '';
+			$html .= !empty( $data[ $fields['number'] ] ) ? '<figure class="de_grona_candidate_number"><span>' . $data[ $fields['number'] ] . '</span></figure>' : '';
+			$html .= !empty( $image_thumb ) ? '<figure class="de_grona_candidate_img"><img src="' . $image_thumb . '"></figure>' : '';
+			$html .= '</div>';
+		endif;
+
+		return $html;
+	} // End get_candidate_home_page_data ()
 
 }
