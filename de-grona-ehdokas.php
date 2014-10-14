@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: De gröna Ehdokas
+ * Plugin Name: De Gröna Ehdokas
  * Version: 0.0.1
  * Plugin URI: https://github.com/ypcs/degrona-ehdokas
  * Description: De Gröna Ehdokas
