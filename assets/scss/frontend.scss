@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'colors';
 
-$small-box-shadow: 0 0 2px rgba(10, 10, 10, .5);
+$small-box-shadow: inset 0 0 2px rgba(10, 10, 10, 0.2);
 
 .de_grona_candidate_jumbotron{
   background-repeat: no-repeat;
@@ -74,12 +74,22 @@ $small-box-shadow: 0 0 2px rgba(10, 10, 10, .5);
       height: 25vw;
       width: 25vw;
     }
+    @include breakpoint-to(big-screens) {
+      height: 10vw;
+      width: 10vw;
+    }
     .wrap{
       @include vertical-align;
     }
     span{
-      font-size: 250%;
+      font-size: 300%;
       text-shadow: 0 0px 1px rgb(70, 70, 70);
+      @include breakpoint-to(small-screens) {
+        font-size: 200%;
+      }
+      @include breakpoint-to(medium-screens) {
+        font-size: 250%;
+      }
     }
   }
   .de_grona_candidate_img{

@@ -26,6 +26,7 @@
 
 $break-small: 420px;
 $break-large: 900px;
+$break-xlarge: 1280px;
 
 @mixin breakpoint-to($media) {
   @if $media == small-screens {
@@ -36,5 +37,8 @@ $break-large: 900px;
   }
   @else if $media == wide-screens {
     @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == big-screens {
+    @media only screen and (min-width: $break-xlarge) { @content; }
   }
 }
