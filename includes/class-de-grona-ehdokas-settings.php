@@ -346,6 +346,18 @@ class De_Grona_Ehdokas_Settings {
 		echo $html;
 	}
 
+	private function clear_cached() {
+
+		// If wp_super_cache is used, clear cache for front_page so changes are displayed immediately
+		if ( function_exists ( 'wp_cache_post_change' ) ) {
+			$front_page_id = get_option( 'page_on_front' );
+			$GLOBALS["super_cache_enabled"] = 1;
+			wp_cache_post_change( $front_page_id );
+		}
+
+		delete_transient( 'degrona15_candidate_transient' );
+	}
+
 	/**
 	 * Load settings page content
 	 * @return void
@@ -354,7 +366,7 @@ class De_Grona_Ehdokas_Settings {
 
 		// Delete degrona15_candidate_transient if user update data in candidate_info -page
 		if ( isset( $_GET['settings-updated'] ) && ( isset( $_GET['tab'] ) && $_GET['tab'] == 'candidate_info' || isset( $_GET['page'] ) && !isset( $_GET['tab'] ) && $_GET['page'] == 'de_grona_ehdokas_settings' ) )  {
-			delete_transient( 'degrona15_candidate_transient' );
+			$this->clear_cached();
 		}
 		// Build page HTML
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
