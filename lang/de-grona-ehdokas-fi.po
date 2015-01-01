@@ -1,0 +1,398 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: degrona-ehdokas\n"
+"POT-Creation-Date: 2015-01-01 16:50+0200\n"
+"PO-Revision-Date: 2015-01-01 18:56+0200\n"
+"Last-Translator: Janne Saarela <jannejuhani@gmail.com>\n"
+"Language-Team: \n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/class-de-grona-ehdokas-settings.php:70
+#: includes/class-de-grona-ehdokas-settings.php:373
+msgid "Candidate '15 Settings"
+msgstr "Ehdokas '15 Asetukset"
+
+#: includes/class-de-grona-ehdokas-settings.php:70
+msgid "Candidate '15"
+msgstr "Ehdokas '15"
+
+#: includes/class-de-grona-ehdokas-settings.php:97
+msgid "Settings"
+msgstr "Asetukset"
+
+#: includes/class-de-grona-ehdokas-settings.php:109
+msgid "Candidate Info"
+msgstr "Ehdokkaan tiedot"
+
+#: includes/class-de-grona-ehdokas-settings.php:110
+msgid ""
+"Basic information about yourself. This information is displayed on the site "
+"home page."
+msgstr "Yleistiedot itsestäsi. Nämä tiedot näytetään sivuston etusivulla."
+
+#: includes/class-de-grona-ehdokas-settings.php:114
+msgid "Your name"
+msgstr "﻿Nimesi"
+
+#: includes/class-de-grona-ehdokas-settings.php:115
+msgid "Add your name."
+msgstr "﻿Lisää nimesi."
+
+#: includes/class-de-grona-ehdokas-settings.php:117
+#: includes/class-de-grona-ehdokas-settings.php:118
+msgid "George Hay"
+msgstr "Anna Ehdokas"
+
+#: includes/class-de-grona-ehdokas-settings.php:122
+msgid "Short description"
+msgstr "﻿Lyhyt kuvaus"
+
+#: includes/class-de-grona-ehdokas-settings.php:123
+msgid "Add short description about yourself."
+msgstr "﻿Lisää lyhyt kuvaus itsestäsi."
+
+#: includes/class-de-grona-ehdokas-settings.php:125
+#: includes/class-de-grona-ehdokas-settings.php:126
+msgid "I am George Hay, parliament election candidate from Toronto."
+msgstr ""
+"Olen Anna Ehdokas, 35-vuotias opettaja Jyväskylästä. Ehdolla eduskuntaan "
+"2015!"
+
+#: includes/class-de-grona-ehdokas-settings.php:130
+msgid "Your candidate number"
+msgstr "Ehdokasnumerosi"
+
+#: includes/class-de-grona-ehdokas-settings.php:131
+msgid ""
+"Add your candidate number. Leave blank if you don't know it at the moment."
+msgstr "Lisää ehdokasnumerosi. Jätä tyhjäksi, mikäli et tiedä sitä vielä."
+
+#: includes/class-de-grona-ehdokas-settings.php:138
+msgid "Your image"
+msgstr "Ehdokaskuvasi"
+
+#: includes/class-de-grona-ehdokas-settings.php:139
+msgid "Add you candidate image."
+msgstr "Lisää ehdokaskuvasi."
+
+#: includes/class-de-grona-ehdokas-settings.php:146
+msgid "Show candidate info on home page?"
+msgstr "Näytä ehdokastietosi etusivulla?"
+
+#: includes/class-de-grona-ehdokas-settings.php:147
+msgid "Check if you want to show your candidate details on home page."
+msgstr "Valitse, jos haluat että tietosi näkyvät etusivulla."
+
+#: includes/class-de-grona-ehdokas-settings.php:202
+msgid "Social Media Info"
+msgstr "Sosiaalisen median asetukset"
+
+#: includes/class-de-grona-ehdokas-settings.php:203
+msgid ""
+"Add your social media username and page information here and your site will "
+"use them automatically."
+msgstr ""
+"Lisää eri sosiaalisen median sivustojen käyttäjänimesi, niin tietoja "
+"käytetään automaattisesti sivustolla."
+
+#: includes/class-de-grona-ehdokas-settings.php:207
+msgid "Your Facebook-page ID"
+msgstr "Sinun Facebook-sivun ID"
+
+#: includes/class-de-grona-ehdokas-settings.php:208
+msgid "Add your Facebook-page ID."
+msgstr "﻿Lisää Facebook-sivun ID."
+
+#: includes/class-de-grona-ehdokas-settings.php:211
+msgid "00123456789"
+msgstr "﻿00123456789"
+
+#: includes/class-de-grona-ehdokas-settings.php:215
+msgid "Your Twitter username"
+msgstr "﻿Sinun Twitter-käyttäjätunnus"
+
+#: includes/class-de-grona-ehdokas-settings.php:216
+msgid "Add your Twitter username."
+msgstr "﻿Lisää Twitter-käyttäjätunnus."
+
+#: includes/class-de-grona-ehdokas-settings.php:219
+#: includes/class-de-grona-ehdokas-settings.php:227
+msgid "username"
+msgstr "﻿käyttäjätunnus"
+
+#: includes/class-de-grona-ehdokas-settings.php:223
+msgid "Your Instagram username"
+msgstr "﻿Sinun Instagram käyttäjätunnus"
+
+#: includes/class-de-grona-ehdokas-settings.php:224
+msgid "Add your Instagram username."
+msgstr "﻿Lisää Instagram käyttäjätunnus."
+
+#: includes/class-de-grona-ehdokas-settings.php:256
+msgid "Other Info"
+msgstr "Muut tiedot"
+
+#: includes/class-de-grona-ehdokas-settings.php:257
+msgid "Other settings. This information is displayed on the site."
+msgstr "Muut asetukset. Nämä tiedot näkyvät sivustolla."
+
+#: includes/class-de-grona-ehdokas-settings.php:261
+msgid "Your contact information"
+msgstr "﻿Yhteystietosi"
+
+#: includes/class-de-grona-ehdokas-settings.php:262
+msgid "Add contact information."
+msgstr "﻿Lisää yhteystietosi."
+
+#: includes/class-de-grona-ehdokas-settings.php:265
+msgid ""
+"George\n"
+"tel. 0123456789\n"
+"email: george@hay.com"
+msgstr ""
+"Anna\n"
+"puh. 0123456789\n"
+"email: anna@ehdokas.fi"
+
+#: includes/class-de-grona-ehdokas-settings.php:269
+msgid "Home page background image"
+msgstr "﻿Etusivun taustakuva"
+
+#: includes/class-de-grona-ehdokas-settings.php:270
+msgid "Add you home page background image."
+msgstr "Lisää etusivun taustakuva."
+
+#: includes/class-de-grona-ehdokas-settings.php:277
+msgid "Join the campaign page url"
+msgstr "Tule mukaan kampanjaan sivun osoite"
+
+#: includes/class-de-grona-ehdokas-settings.php:278
+msgid "Add your \"Join the campaign url\"."
+msgstr "Lisää &quot;Liity kampanjaan sivun osoite &quot;."
+
+#: includes/class-de-grona-ehdokas-settings.php:281
+msgid "http://www.yousite.com/join-the-campaign"
+msgstr "﻿http://www.annaehdokas.fi/tule-mukaan"
+
+#: includes/class-de-grona-ehdokas-settings.php:285
+msgid "Donate page url"
+msgstr "Lahjoitus-sivun osoite"
+
+#: includes/class-de-grona-ehdokas-settings.php:286
+msgid "Add your donate page url."
+msgstr "Lisää lahjoitus-sivun osoite."
+
+#: includes/class-de-grona-ehdokas-settings.php:289
+msgid "http://www.donateme.com/myname"
+msgstr "﻿http://www.lahjoita.fi/annaehdokas"
+
+#: includes/class-de-grona-ehdokas-settings.php:425
+msgid "Save Settings"
+msgstr "﻿Tallenna asetukset"
+
+#: includes/class-de-grona-ehdokas-settings.php:461
+#: includes/class-de-grona-ehdokas-settings.php:470
+#: includes/class-de-grona-ehdokas.php:243
+#: includes/class-de-grona-ehdokas.php:252
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-admin-api.php:164
+msgid "Upload an image"
+msgstr "Lataa kuva"
+
+#: includes/lib/class-de-grona-ehdokas-admin-api.php:164
+msgid "Use image"
+msgstr "﻿Käytä kuvaa"
+
+#: includes/lib/class-de-grona-ehdokas-admin-api.php:164
+msgid "Upload new image"
+msgstr "﻿Lataa uusi kuva"
+
+#: includes/lib/class-de-grona-ehdokas-admin-api.php:165
+msgid "Remove image"
+msgstr "﻿Poista kuva"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:68
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:70
+#, php-format
+msgid "Add New %s"
+msgstr "﻿Lisää uusi %s"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:69
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:67
+#, php-format
+msgid "Edit %s"
+msgstr "﻿Muokkaa %s"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:70
+#, php-format
+msgid "New %s"
+msgstr "Uusi %s"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:71
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:66
+#, php-format
+msgid "All %s"
+msgstr "Kaikki %s"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:72
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:68
+#, php-format
+msgid "View %s"
+msgstr "Tarkastele %s"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:73
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:74
+#, php-format
+msgid "Search %s"
+msgstr "﻿Etsi %s"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:74
+#, php-format
+msgid "No %s Found"
+msgstr "%s ei löytynyt"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:75
+#, php-format
+msgid "No %s Found In Trash"
+msgstr "%s ei löytynyt roskakorista"
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:76
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:72
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:113
+#, php-format
+msgid "%1$s updated. %2$sView %3$s%4$s."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:114
+msgid "Custom field updated."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:115
+msgid "Custom field deleted."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:116
+#, php-format
+msgid "%1$s updated."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:117
+#, php-format
+msgid "%1$s restored to revision from %2$s."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:118
+#, php-format
+msgid "%1$s published. %2$sView %3$s%4s."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:119
+#, php-format
+msgid "%1$s saved."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:120
+#, php-format
+msgid "%1$s submitted. %2$sPreview post%3$s%4$s."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:121
+#, php-format
+msgid "%1$s scheduled for: %2$s. %3$sPreview %4$s%5$s."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:121
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:122
+#, php-format
+msgid "%1$s draft updated. %2$sPreview %3$s%4$s."
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:137
+#, php-format
+msgid "%1$s %2$s updated."
+msgid_plural "%1$s %3$s updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:138
+#, php-format
+msgid "%1$s %2$s not updated, somebody is editing it."
+msgid_plural "%1$s %3$s not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:139
+#, php-format
+msgid "%1$s %2$s permanently deleted."
+msgid_plural "%1$s %3$s permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:140
+#, php-format
+msgid "%1$s %2$s moved to the Trash."
+msgid_plural "%1$s %3$s moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/class-de-grona-ehdokas-post-type.php:141
+#, php-format
+msgid "%1$s %2$s restored from the Trash."
+msgid_plural "%1$s %3$s restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:69
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:71
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:73
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:75
+#, php-format
+msgid "Popular %s"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:76
+#, php-format
+msgid "Separate %s with commas"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:77
+#, php-format
+msgid "Add or remove %s"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:78
+#, php-format
+msgid "Choose from the most used %s"
+msgstr ""
+
+#: includes/lib/class-de-grona-ehdokas-taxonomy.php:79
+#, php-format
+msgid "No %s found"
+msgstr ""
