@@ -336,7 +336,8 @@ class De_Grona_Ehdokas {
 			// If image is set, retrieve the src url
 			if ( $data[ $fields['image'] ] ) {
 				$image_thumb = wp_get_attachment_image_src( $data[ $fields['image'] ], 'large' );
-
+			} else {
+				$image_thumb[0] = $this->assets_url . '/img/candidate-default.png';
 			}
 
 			$html .= '<div class="de_grona_candidate_wrap row">';
