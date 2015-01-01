@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'colors';
 
-$small-box-shadow: inset 0 0 2px rgba(10, 10, 10, 0.2);
+$wrap-box-shadow: inset 20px 20px 20px rgba(10, 10, 10, 0.2), inset -20px -20px 20px rgba(10, 10, 10, 0.2);
 
 .de_grona_candidate_jumbotron{
   background-repeat: no-repeat;
@@ -12,9 +12,12 @@ $small-box-shadow: inset 0 0 2px rgba(10, 10, 10, 0.2);
 }
 .de_grona_candidate_wrap{
   @include vendor-prefix('box-sizing', 'border-box');
+  background-color: $basic_bg_color;
+  background-color: $basic_bg_color_alpha;
+  @include vendor-prefix('box-shadow', $wrap-box-shadow);
   margin: 0 auto;
   max-width: 80rem;
-  padding: 0 1rem;
+  padding: 1rem;
   width: 100%;
   *, *:before, *:after {
     @include vendor-prefix('box-sizing', 'border-box');
@@ -36,6 +39,9 @@ $small-box-shadow: inset 0 0 2px rgba(10, 10, 10, 0.2);
       }
       width: 100%;
     }
+    .de_grona_candidate_img{
+      text-align: center;
+    }
   }
   &:before, &:after {
     content: " ";
@@ -45,12 +51,12 @@ $small-box-shadow: inset 0 0 2px rgba(10, 10, 10, 0.2);
     clear: both;
   }
   .de_grona_candidate_info{
-    background-color: $basic_bg_color;
-    background-color: $basic_bg_color_alpha;
-    padding: 1rem;
-    @include vendor-prefix('box-shadow', $small-box-shadow);
     h1{
-      font-size: 250%;
+      font-size: 350%;
+      font-weight: 600;
+    }
+    p{
+      font-size: 130%;
     }
   }
   .de_grona_candidate_number{
@@ -58,37 +64,35 @@ $small-box-shadow: inset 0 0 2px rgba(10, 10, 10, 0.2);
     border-radius: 100%;
     @include vendor-prefix('box-shadow', 'inset 0 0 15px rgba(10, 10, 10, 0.5)');
     color: white;
-    height: 15vw;
+    height: 20vw;
     max-height: 100%;
     max-width: 100%;
     padding: 1rem;
     position: relative;
     text-align: center;
-    width: 15vw;
+    width: 20vw;
     @include preserve-threedee;
     @include breakpoint-to(small-screens) {
       height: 30vw;
+      margin: 0 auto;
       width: 30vw;
     }
     @include breakpoint-to(medium-screens) {
       height: 25vw;
+      margin: 0 auto;
       width: 25vw;
-    }
-    @include breakpoint-to(big-screens) {
-      height: 10vw;
-      width: 10vw;
     }
     .wrap{
       @include vertical-align;
     }
     span{
-      font-size: 300%;
+      font-size: 500%;
       text-shadow: 0 0px 1px rgb(70, 70, 70);
       @include breakpoint-to(small-screens) {
         font-size: 200%;
       }
       @include breakpoint-to(medium-screens) {
-        font-size: 250%;
+        font-size: 300%;
       }
     }
   }
