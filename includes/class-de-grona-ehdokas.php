@@ -307,6 +307,7 @@ class De_Grona_Ehdokas {
 		$fields = array(
 			'name' => $this->settings->base . 'degrona15_candidate_name',
 			'description' => $this->settings->base . 'degrona15_candidate_description',
+			'additional_description' => $this->settings->base . 'degrona15_candidate_additional_description',
 			'number' => $this->settings->base . 'degrona15_candidate_number',
 			'image' => $this->settings->base . 'degrona15_candidate_image',
 			'enable' => $this->settings->base . 'degrona15_candidate_enable_home_page'
@@ -344,6 +345,7 @@ class De_Grona_Ehdokas {
 			$html .= '<section class="de_grona_candidate_info large-6 columns">';
 			$html .= !empty( $data[ $fields['name'] ] ) ? '<h1>' . $data[ $fields['name'] ] . '</h1>' : '';
 			$html .= !empty( $data[ $fields['description'] ] ) ? '<p>' . $data[ $fields['description'] ] . '</p>' : '';
+			$html .= !empty( $data[ $fields['additional_description'] ] ) ? '<p>' . $data[ $fields['additional_description'] ] . '</p>' : '';
 			$html .= !empty( $data[ $fields['number'] ] ) ? '<figure class="de_grona_candidate_number"><div class="wrap"><span>' . $data[ $fields['number'] ] . '</span></div></figure>' : '';
 			$html .= '</section>';
 			$html .= '<section class="de_grona_candidate_image large-6 columns">';

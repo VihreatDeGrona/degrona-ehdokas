@@ -126,6 +126,14 @@ class De_Grona_Ehdokas_Settings {
 					'placeholder'	=> __( 'I am George Hay, parliament election candidate from Toronto.', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
+					'id' 			=> 'degrona15_candidate_additional_description',
+					'label'			=> __( 'Additional description' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add additional description.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'textarea',
+					'default'		=> __( 'Vote me and I will stop coal power plants!', PLUGIN_TEXT_DOMAIN ),
+					'placeholder'	=> __( 'Vote me and I will stop coal power plants!', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
 					'id' 			=> 'degrona15_candidate_number',
 					'label'			=> __( 'Your candidate number' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add your candidate number. Leave blank if you don\'t know it at the moment.', PLUGIN_TEXT_DOMAIN ),
