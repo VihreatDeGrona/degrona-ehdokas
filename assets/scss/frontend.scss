@@ -64,13 +64,13 @@ $wrap-box-shadow: inset 20px 20px 20px rgba(10, 10, 10, 0.2), inset -20px -20px 
     border-radius: 100%;
     @include vendor-prefix('box-shadow', 'inset 0 0 15px rgba(10, 10, 10, 0.5)');
     color: white;
-    height: 20vw;
+    height: 15vw;
     max-height: 100%;
     max-width: 100%;
     padding: 1rem;
     position: relative;
     text-align: center;
-    width: 20vw;
+    width: 15vw;
     @include preserve-threedee;
     @include breakpoint-to(small-screens) {
       height: 30vw;
@@ -86,13 +86,13 @@ $wrap-box-shadow: inset 20px 20px 20px rgba(10, 10, 10, 0.2), inset -20px -20px 
       @include vertical-align;
     }
     span{
-      font-size: 500%;
+      font-size: 450%;
       text-shadow: 0 0px 1px rgb(70, 70, 70);
       @include breakpoint-to(small-screens) {
         font-size: 200%;
       }
       @include breakpoint-to(medium-screens) {
-        font-size: 300%;
+        font-size: 350%;
       }
     }
   }
