@@ -2,7 +2,7 @@
 /*
  * Plugin Name: De Gröna Ehdokas
  * Version: 0.0.1
- * Plugin URI: https://github.com/ypcs/degrona-ehdokas
+ * Plugin URI: https://github.com/VihreatDeGrona/degrona-ehdokas
  * Description: De Gröna Ehdokas
  * Author: Janne Saarela
  * Author URI: http://www.jannejuhani.net
