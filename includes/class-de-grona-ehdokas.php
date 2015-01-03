@@ -357,4 +357,41 @@ class De_Grona_Ehdokas {
 		return $html;
 	} // End get_candidate_home_page_data ()
 
+	/**
+	 * Generate HTML for displaying candidate contact information from "Other Info"-data
+	 * @since   0.1.0
+	 * @return string
+	 */
+	public function get_candidate_contact_information_data ( ) {
+
+		// Add default data fields in array
+		$fields = array(
+			'phone' => $this->settings->base . 'degrona15_candidate_contact_information_phone',
+			'email' => $this->settings->base . 'degrona15_candidate_contact_information_email'
+			);
+
+		$html = '';
+
+		// Get transient
+		$data = get_transient( 'degrona15_candidate_contact_info_transient' );
+
+
+		// If transient is not set, get data from db and set transient
+		if ( ! $data ) :
+			// Get data based on fields
+			foreach ($fields as $key => $value) {
+				$data[$value] = get_option( $value );
+			}
+			if ( !empty( $data ) ) {
+				set_transient( 'degrona15_candidate_contact_info_transient', $data, 0 );
+			}
+
+		endif;
+
+			$html .= !empty( $data[ $fields['phone'] ] ) ? '<p class="phone">'. __('Phone number: ', PLUGIN_TEXT_DOMAIN ) . $data[ $fields['phone'] ] . '</p>' : '';
+			$html .= !empty( $data[ $fields['email'] ] ) ? '<p class="email">' . __('Email: ', PLUGIN_TEXT_DOMAIN ) . $data[ $fields['email'] ] . '</p>' : '';
+
+		return $html;
+	} // End get_candidate_contact_information_data ()
+
 }
