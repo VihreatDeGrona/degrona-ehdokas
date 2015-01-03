@@ -1,13 +1,13 @@
 <?php
 /*
  * Plugin Name: De Gröna Ehdokas
- * Version: 0.0.1
+ * Version: 0.1.0
  * Plugin URI: https://github.com/VihreatDeGrona/degrona-ehdokas
  * Description: De Gröna Ehdokas
  * Author: Janne Saarela
  * Author URI: http://www.jannejuhani.net
  * Requires at least: 3.9
- * Tested up to: 4.0
+ * Tested up to: 4.1
  *
  * Text Domain: de-grona-ehdokas
  * Domain Path: /lang/
@@ -19,7 +19,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'PLUGIN_VERSION', '0.0.1' );
+define( 'PLUGIN_VERSION', '0.1.0' );
 define( 'PLUGIN_TEXT_DOMAIN', 'de-grona-ehdokas' );
 
 // Load plugin class files
@@ -34,7 +34,7 @@ require_once( 'includes/lib/class-de-grona-ehdokas-admin-api.php' );
 /**
  * Returns the main instance of De_Grona_Ehdokas to prevent the need to use globals.
  *
- * @since  1.0.0
+ * @since  0.0.1
  * @return object De_Grona_Ehdokas
  */
 function De_Grona_Ehdokas () {

@@ -8,7 +8,7 @@ class De_Grona_Ehdokas_Settings {
 	 * The single instance of De_Grona_Ehdokas_Settings.
 	 * @var 	object
 	 * @access  private
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	private static $_instance = null;
 
@@ -16,7 +16,7 @@ class De_Grona_Ehdokas_Settings {
 	 * The main plugin object.
 	 * @var 	object
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $parent = null;
 

@@ -8,7 +8,7 @@ class De_Grona_Ehdokas_Taxonomy {
 	 * The name for the taxonomy.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $taxonomy;
 
@@ -16,7 +16,7 @@ class De_Grona_Ehdokas_Taxonomy {
 	 * The plural name for the taxonomy terms.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $plural;
 
@@ -24,7 +24,7 @@ class De_Grona_Ehdokas_Taxonomy {
 	 * The singular name for the taxonomy terms.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $single;
 
@@ -32,7 +32,7 @@ class De_Grona_Ehdokas_Taxonomy {
 	 * The array of post types to which this taxonomy applies.
 	 * @var 	array
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $post_types;
 

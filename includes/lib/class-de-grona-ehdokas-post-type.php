@@ -8,7 +8,7 @@ class De_Grona_Ehdokas_Post_Type {
 	 * The name for the custom post type.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $post_type;
 
@@ -16,7 +16,7 @@ class De_Grona_Ehdokas_Post_Type {
 	 * The plural name for the custom post type posts.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $plural;
 
@@ -24,7 +24,7 @@ class De_Grona_Ehdokas_Post_Type {
 	 * The singular name for the custom post type posts.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $single;
 
@@ -32,7 +32,7 @@ class De_Grona_Ehdokas_Post_Type {
 	 * The description of the custom post type.
 	 * @var 	string
 	 * @access  public
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	public $description;
 

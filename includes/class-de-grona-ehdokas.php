@@ -8,7 +8,7 @@ class De_Grona_Ehdokas {
 	 * The single instance of De_Grona_Ehdokas.
 	 * @var 	object
 	 * @access  private
-	 * @since 	1.0.0
+	 * @since 	0.0.1
 	 */
 	private static $_instance = null;
 
