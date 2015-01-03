@@ -265,12 +265,20 @@ class De_Grona_Ehdokas_Settings {
 			'description'			=> __( 'Other settings. This information is displayed on the site.', PLUGIN_TEXT_DOMAIN ),
 			'fields'				=> array(
 				array(
-					'id' 			=> 'degrona15_candidate_contact_information',
-					'label'			=> __( 'Your contact information' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add contact information.', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'textarea',
-					'default'		=> '',
-					'placeholder'	=> __( "George\ntel. 0123456789\nemail: george@hay.com", PLUGIN_TEXT_DOMAIN )
+					'id' 			=> 'degrona15_candidate_contact_information_phone',
+					'label'			=> __( 'Your phone number' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your phone number.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'number',
+					'default'		=> __( "0123456789"),
+					'placeholder'	=> __( "0123456789", PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_contact_information_email',
+					'label'			=> __( 'Your email' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your email.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'email',
+					'default'		=> __( "george@hay.com"),
+					'placeholder'	=> __( "george@hay.com", PLUGIN_TEXT_DOMAIN )
 				),
 				array(
 					'id' 			=> 'degrona15_candidate_site_jumbotron',
@@ -364,6 +372,7 @@ class De_Grona_Ehdokas_Settings {
 		}
 
 		delete_transient( 'degrona15_candidate_transient' );
+		delete_transient( 'degrona15_candidate_contact_info_transient' );
 	}
 
 	/**
@@ -372,8 +381,8 @@ class De_Grona_Ehdokas_Settings {
 	 */
 	public function settings_page () {
 
-		// Delete degrona15_candidate_transient if user update data in candidate_info -page
-		if ( isset( $_GET['settings-updated'] ) && ( isset( $_GET['tab'] ) && $_GET['tab'] == 'candidate_info' || isset( $_GET['page'] ) && !isset( $_GET['tab'] ) && $_GET['page'] == 'de_grona_ehdokas_settings' ) )  {
+		// Delete degrona15_candidate_transients if user update data
+		if ( isset( $_GET['settings-updated'] ) && $_GET['page'] == 'de_grona_ehdokas_settings' )  {
 			$this->clear_cached();
 		}
 		// Build page HTML
