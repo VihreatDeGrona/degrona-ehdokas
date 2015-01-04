@@ -138,7 +138,7 @@ class De_Grona_Ehdokas_Settings {
 					'label'			=> __( 'Your candidate number' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add your candidate number. Leave blank if you don\'t know it at the moment.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'number',
-					'default'		=> '',
+					'default'		=> '100',
 					'placeholder'	=> ''
 				),
 				array(
