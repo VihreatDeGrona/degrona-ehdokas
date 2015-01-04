@@ -155,6 +155,14 @@ class De_Grona_Ehdokas_Settings {
 					'description'	=> __( 'Check if you want to show your candidate details on home page.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'checkbox',
 					'default'		=> 'on'
+				),
+				array(
+					'id' 					=> 'degrona15_candidate_data_saved_after_install',
+					'label'				=> '',
+					'description'	=> '',
+					'type'				=> 'hidden',
+					'default'			=> '1',
+					'placeholder'	=> ''
 				)
 				// array(
 				// 	'id' 			=> 'single_checkbox',
@@ -168,14 +176,6 @@ class De_Grona_Ehdokas_Settings {
 				// 	'label'			=> __( 'A Password' , PLUGIN_TEXT_DOMAIN ),
 				// 	'description'	=> __( 'This is a standard password field.', PLUGIN_TEXT_DOMAIN ),
 				// 	'type'			=> 'password',
-				// 	'default'		=> '',
-				// 	'placeholder'	=> __( 'Placeholder text', PLUGIN_TEXT_DOMAIN )
-				// ),
-				// array(
-				// 	'id' 			=> 'secret_text_field',
-				// 	'label'			=> __( 'Some Secret Text' , PLUGIN_TEXT_DOMAIN ),
-				// 	'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', PLUGIN_TEXT_DOMAIN ),
-				// 	'type'			=> 'text_secret',
 				// 	'default'		=> '',
 				// 	'placeholder'	=> __( 'Placeholder text', PLUGIN_TEXT_DOMAIN )
 				// ),

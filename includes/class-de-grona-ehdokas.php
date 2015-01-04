@@ -260,6 +260,32 @@ class De_Grona_Ehdokas {
 	 */
 	public function install () {
 		$this->_log_version_number();
+
+		/**
+		* Enable plugin data by default in activation if plugin data have not been saved ever before
+		* Double check option names when updating this plugin!
+		*/
+
+		$option_name = $this->settings->base;
+
+		$first_install = $option_name . 'degrona15_candidate_data_saved_after_install';
+		$first_install_value = get_option( $first_install );
+		if ( ! $first_install_value ) :
+
+			$option_enable = $option_name . 'degrona15_candidate_enable_home_page';
+			$option_default_name = $option_name . 'degrona15_candidate_name';
+			$option_default_description = $option_name . 'degrona15_candidate_description';
+			$option_default_add_description = $option_name . 'degrona15_candidate_additional_description';
+			$option_default_candidate_number = $option_name . 'degrona15_candidate_number';
+
+			update_option( $option_enable , 'on' );
+			update_option( $option_default_name , __( 'George Hay', PLUGIN_TEXT_DOMAIN ) );
+			update_option( $option_default_description , __( 'I am George Hay, parliament election candidate from Toronto.', PLUGIN_TEXT_DOMAIN ) );
+			update_option( $option_default_add_description , __( 'Vote me and I will stop coal power plants!', PLUGIN_TEXT_DOMAIN ) );
+			update_option( $option_default_candidate_number , '100' );
+
+		endif;
+
 	} // End install ()
 
 	/**
