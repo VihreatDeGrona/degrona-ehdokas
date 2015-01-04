@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: degrona-ehdokas\n"
-"POT-Creation-Date: 2015-01-03 18:17+0200\n"
-"PO-Revision-Date: 2015-01-03 18:17+0200\n"
+"POT-Creation-Date: 2015-01-05 00:20+0200\n"
+"PO-Revision-Date: 2015-01-05 00:20+0200\n"
 "Last-Translator: Janne Saarela <jannejuhani@gmail.com>\n"
 "Language-Team: \n"
 "Language: fi_FI\n"
@@ -46,6 +46,7 @@ msgstr "﻿Lisää nimesi."
 
 #: includes/class-de-grona-ehdokas-settings.php:117
 #: includes/class-de-grona-ehdokas-settings.php:118
+#: includes/class-de-grona-ehdokas.php:282
 msgid "George Hay"
 msgstr "Anna Ehdokas"
 
@@ -59,6 +60,7 @@ msgstr "﻿Lisää lyhyt kuvaus itsestäsi."
 
 #: includes/class-de-grona-ehdokas-settings.php:125
 #: includes/class-de-grona-ehdokas-settings.php:126
+#: includes/class-de-grona-ehdokas.php:283
 msgid "I am George Hay, parliament election candidate from Toronto."
 msgstr ""
 "Olen Anna Ehdokas, 35-vuotias opettaja Jyväskylästä. Ehdolla eduskuntaan "
@@ -74,6 +76,7 @@ msgstr "Lisää halutessasi lisätietoja esim. vaaliteemoistasi."
 
 #: includes/class-de-grona-ehdokas-settings.php:133
 #: includes/class-de-grona-ehdokas-settings.php:134
+#: includes/class-de-grona-ehdokas.php:284
 msgid "Vote me and I will stop coal power plants!"
 msgstr "Äänestämällä minua tuet vahvaa koulutus- ja ilmastopolitiikkaa!"
 
@@ -224,11 +227,11 @@ msgstr "﻿Tallenna asetukset"
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: includes/class-de-grona-ehdokas.php:391
+#: includes/class-de-grona-ehdokas.php:417
 msgid "Phone number: "
 msgstr "Puhelinumero: "
 
-#: includes/class-de-grona-ehdokas.php:392
+#: includes/class-de-grona-ehdokas.php:418
 msgid "Email: "
 msgstr "Sähköposti: "
 

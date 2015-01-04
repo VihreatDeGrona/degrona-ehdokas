@@ -277,7 +277,7 @@ class De_Grona_Ehdokas_Settings {
 					'label'			=> __( 'Your email' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add your email.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'email',
-					'default'		=> __( "george@hay.com"),
+					'default'		=> __( "george@hay.com", PLUGIN_TEXT_DOMAIN ),
 					'placeholder'	=> __( "george@hay.com", PLUGIN_TEXT_DOMAIN )
 				),
 				array(
