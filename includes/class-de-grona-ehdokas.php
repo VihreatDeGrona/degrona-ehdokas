@@ -338,7 +338,7 @@ class De_Grona_Ehdokas {
 			if ( $data[ $fields['image'] ] ) {
 				$image_thumb = wp_get_attachment_image_src( $data[ $fields['image'] ], 'large' );
 			} else {
-				$image_thumb[0] = $this->assets_url . '/img/candidate-default.png';
+				$image_thumb[0] = $this->assets_url . 'img/candidate-default.png';
 			}
 
 			$html .= '<div class="de_grona_candidate_wrap row">';
@@ -393,5 +393,14 @@ class De_Grona_Ehdokas {
 
 		return $html;
 	} // End get_candidate_contact_information_data ()
+
+	/**
+	 * Get default background image
+	 * @since   0.1.0
+	 * @return string
+	 */
+	public function get_jumbtoron_default_bg ( ) {
+		return $this->assets_url . 'img/default-bg.jpg';
+	}
 
 }
