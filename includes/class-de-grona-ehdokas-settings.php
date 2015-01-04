@@ -154,7 +154,7 @@ class De_Grona_Ehdokas_Settings {
 					'label'			=> __( 'Show candidate info on home page?', PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Check if you want to show your candidate details on home page.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'checkbox',
-					'default'		=> true
+					'default'		=> '1'
 				)
 				// array(
 				// 	'id' 			=> 'single_checkbox',
