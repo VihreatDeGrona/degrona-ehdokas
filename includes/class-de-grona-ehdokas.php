@@ -366,17 +366,21 @@ class De_Grona_Ehdokas {
 			} else {
 				$image_thumb[0] = $this->assets_url . 'img/candidate-default.png';
 			}
-
-			$html .= '<div class="de_grona_candidate_wrap row">';
-			$html .= '<section class="de_grona_candidate_info large-6 columns">';
+			$html .= '<div class="de_grona_candidate_wrap">';
+			$html .= '<div class="row">';
+			$html .= '<section class="de_grona_candidate_info small-6 column">';
 			$html .= !empty( $data[ $fields['name'] ] ) ? '<h1>' . $data[ $fields['name'] ] . '</h1>' : '';
 			$html .= !empty( $data[ $fields['description'] ] ) ? '<p>' . $data[ $fields['description'] ] . '</p>' : '';
 			$html .= !empty( $data[ $fields['additional_description'] ] ) ? '<p>' . $data[ $fields['additional_description'] ] . '</p>' : '';
 			$html .= !empty( $data[ $fields['number'] ] ) ? '<figure class="de_grona_candidate_number"><div class="wrap"><span>' . $data[ $fields['number'] ] . '</span></div></figure>' : '';
 			$html .= '</section>';
-			$html .= '<section class="de_grona_candidate_image large-6 columns">';
+			$html .= '<section class="de_grona_candidate_image small-6 column">';
 			$html .= !empty( $image_thumb ) ? '<figure class="de_grona_candidate_img"><img src="' . $image_thumb[0] . '"></figure>' : '';
 			$html .= '</section>';
+			$html .= '</div>';
+			$html .= '<div class="row">';
+			$html .= '<figure class="de_grona_logo small-12 medium-5 large-3 end column"><img src="' . $this->assets_url . 'img/vihreatdegrona-logo.jpg"></figure>';
+			$html .= '</div>';
 			$html .= '</div>';
 		endif;
 
