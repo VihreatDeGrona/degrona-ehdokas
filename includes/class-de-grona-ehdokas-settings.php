@@ -150,6 +150,14 @@ class De_Grona_Ehdokas_Settings {
 					'placeholder'	=> ''
 				),
 				array(
+					'id' 			=> 'degrona15_candidate_site_jumbotron',
+					'label'			=> __( 'Home page background image' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add you home page background image.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'image',
+					'default'		=> '',
+					'placeholder'	=> ''
+				),
+				array(
 					'id' 			=> 'degrona15_candidate_enable_home_page',
 					'label'			=> __( 'Show candidate info on home page?', PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Check if you want to show your candidate details on home page.', PLUGIN_TEXT_DOMAIN ),
@@ -279,14 +287,6 @@ class De_Grona_Ehdokas_Settings {
 					'type'			=> 'email',
 					'default'		=> __( "george@hay.com", PLUGIN_TEXT_DOMAIN ),
 					'placeholder'	=> __( "george@hay.com", PLUGIN_TEXT_DOMAIN )
-				),
-				array(
-					'id' 			=> 'degrona15_candidate_site_jumbotron',
-					'label'			=> __( 'Home page background image' , PLUGIN_TEXT_DOMAIN ),
-					'description'	=> __( 'Add you home page background image.', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'image',
-					'default'		=> '',
-					'placeholder'	=> ''
 				),
 				array(
 					'id' 			=> 'degrona15_candidate_join_the_campaign_url',
