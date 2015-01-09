@@ -25,6 +25,12 @@ $wrap-box-shadow: inset 20px 20px 20px rgba(10, 10, 10, 0.2), inset -20px -20px 
   *, *:before, *:after {
     @include vendor-prefix('box-sizing', 'border-box');
   }
+  > div {
+    margin-bottom: 1rem;
+  }
+  > div:last-of-type{
+    margin-bottom: 0;
+  }
   img{
     max-width: 100%;
   }
