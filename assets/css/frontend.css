@@ -105,16 +105,3 @@
           font-size: 350%; } }
   .de_grona_candidate_wrap .de_grona_candidate_img img {
     max-height: 500px; }
-
-.columns {
-  float: left;
-  padding: 0 0.83333rem;
-  width: 100%; }
-  @media only screen and (min-width: 641px) and (max-width: 899px) {
-    .columns {
-      float: none;
-      padding: 0; } }
-  @media only screen and (max-width: 640px) {
-    .columns {
-      float: none;
-      padding: 0; } }

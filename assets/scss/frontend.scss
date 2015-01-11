@@ -110,16 +110,3 @@ $wrap-box-shadow: inset 20px 20px 20px rgba(10, 10, 10, 0.2), inset -20px -20px 
     }
   }
 }
-.columns{
-  float: left;
-  padding: 0 0.83333rem;
-  width: 100%;
-  @include breakpoint-to(medium-screens) {
-    float:none;
-    padding: 0;
-  }
-  @include breakpoint-to(small-screens) {
-    float:none;
-    padding: 0;
-  }
-}
