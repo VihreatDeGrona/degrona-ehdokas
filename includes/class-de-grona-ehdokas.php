@@ -112,6 +112,8 @@ class De_Grona_Ehdokas {
 		// Handle localisation
 		$this->load_plugin_textdomain();
 		add_action( 'init', array( $this, 'load_localisation' ), 0 );
+
+		add_shortcode( 'degrona15_candidate_cta_buttons', array( $this, 'get_call_to_action_buttons' ) );
 	} // End __construct ()
 
 	/**
@@ -418,8 +420,8 @@ class De_Grona_Ehdokas {
 
 		endif;
 
-			$html .= !empty( $data[ $fields['phone'] ] ) ? '<p class="phone">'. __('Phone number: ', PLUGIN_TEXT_DOMAIN ) . $data[ $fields['phone'] ] . '</p>' : '';
-			$html .= !empty( $data[ $fields['email'] ] ) ? '<p class="email">' . __('Email: ', PLUGIN_TEXT_DOMAIN ) . $data[ $fields['email'] ] . '</p>' : '';
+			$html .= !empty( $data[ $fields['phone'] ] ) ? '<p class="phone">'. __( 'Phone number: ', PLUGIN_TEXT_DOMAIN ) . $data[ $fields['phone'] ] . '</p>' : '';
+			$html .= !empty( $data[ $fields['email'] ] ) ? '<p class="email">' . __( 'Email: ', PLUGIN_TEXT_DOMAIN ) . $data[ $fields['email'] ] . '</p>' : '';
 
 		return $html;
 	} // End get_candidate_contact_information_data ()
@@ -431,6 +433,54 @@ class De_Grona_Ehdokas {
 	 */
 	public function get_jumbtoron_default_bg ( ) {
 		return $this->assets_url . 'img/default-bg.jpg';
+	}
+
+	/**
+	 * Get join the campaign and donate buttons
+	 * @since   0.1.0
+	 * @return string
+	 */
+	public function get_call_to_action_buttons ( ) {
+		// Add default data fields in array
+		$fields = array(
+			'donate_url' => $this->settings->base . 'degrona15_candidate_donate_url',
+			'donate_button_text' => $this->settings->base . 'degrona15_candidate_donate_button_text',
+			'join_the_campaign_url' => $this->settings->base . 'degrona15_candidate_join_the_campaign_url',
+			'join_the_campaign_button_text' => $this->settings->base . 'degrona15_candidate_join_the_campaign_button_text'
+			);
+
+		$html = '';
+
+		// Get transient
+		$data = get_transient( 'degrona15_candidate_call_to_action_buttons_transient' );
+
+
+		// If transient is not set, get data from db and set transient
+		if ( ! $data ) :
+			// Get data based on fields
+			foreach ($fields as $key => $value) {
+				$data[$value] = get_option( $value );
+			}
+			if ( !empty( $data ) ) {
+				set_transient( 'degrona15_candidate_call_to_action_buttons_transient', $data, 0 );
+			}
+
+		endif;
+
+			if( !empty( $data[ $fields['donate_url'] ] ) ) :
+				$html .= '<a href="'. esc_url( $data[ $fields['donate_url'] ] ) .'" class="degrona15_candidate donate button radius small-12">';
+				$html .= '<i class="fi-euro"></i>';
+				$html .= !empty( $data[ $fields['donate_button_text'] ] ) ? $data[ $fields['donate_button_text'] ] : __( 'Donate', PLUGIN_TEXT_DOMAIN );
+				$html .= '</a>';
+			endif;
+
+			if( !empty( $data[ $fields['join_the_campaign_url'] ] ) ) :
+				$html .= '<a href="'. esc_url( $data[ $fields['join_the_campaign_url'] ] ) .'" class="degrona15_candidate join-the-campaign button radius small-12">';
+				$html .= '<i class="fi-torsos-all"></i>';
+				$html .= !empty( $data[ $fields['join_the_campaign_button_text'] ] ) ? $data[ $fields['join_the_campaign_button_text'] ] : __( 'Join the campaign!', PLUGIN_TEXT_DOMAIN );
+				$html .= '</a>';
+			endif;
+		return $html;
 	}
 
 }
