@@ -79,7 +79,12 @@ module.exports = function(grunt) {
 				tasks: ['uglify']
 			}
 		},
-
+		zip: {
+			plugin: {
+				dest: 'zip/degrona-ehdokas.zip',
+				src: ['includes/**', 'assets/css/*.css', 'assets/img/*', 'assets/js/*.min.js', 'lang/*', '*.php']
+			}
+		}
 	});
 
 	// Register tasks
@@ -90,6 +95,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [
 		'sass',
 		'uglify'
+	]);
+
+	grunt.registerTask('build_plugin', [
+		'zip:plugin'
 	]);
 
 };
