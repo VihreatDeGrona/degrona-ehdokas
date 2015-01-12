@@ -25,6 +25,7 @@ define( 'PLUGIN_TEXT_DOMAIN', 'de-grona-ehdokas' );
 // Load plugin class files
 require_once( 'includes/class-de-grona-ehdokas.php' );
 require_once( 'includes/class-de-grona-ehdokas-settings.php' );
+require_once( 'includes/class-de-grona-ehdokas-widget.php' );
 
 // Load plugin libraries
 require_once( 'includes/lib/class-de-grona-ehdokas-admin-api.php' );
