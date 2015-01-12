@@ -215,7 +215,7 @@ class De_Grona_Ehdokas_Settings {
 		);
 
 		$settings['social_media'] = array(
-			'title'					=> __( 'Social Media Info', PLUGIN_TEXT_DOMAIN ),
+			'title'					=> __( 'Social Media Info (not in use at the moment!)', PLUGIN_TEXT_DOMAIN ),
 			'description'			=> __( 'Add your social media username and page information here and your site will use them automatically.', PLUGIN_TEXT_DOMAIN ),
 			'fields'				=> array(
 				array(
@@ -289,18 +289,34 @@ class De_Grona_Ehdokas_Settings {
 					'placeholder'	=> __( "george@hay.com", PLUGIN_TEXT_DOMAIN )
 				),
 				array(
+					'id' 			=> 'degrona15_candidate_join_the_campaign_button_text',
+					'label'			=> __( 'Join the campaign button text' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your join the campaign button text.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> __( 'Join the campaign!', PLUGIN_TEXT_DOMAIN ),
+					'placeholder'	=> __( 'Join the campaign!', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
 					'id' 			=> 'degrona15_candidate_join_the_campaign_url',
 					'label'			=> __( 'Join the campaign page url' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add your "Join the campaign url".', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'text',
+					'type'			=> 'url',
 					'default'		=> '',
 					'placeholder'	=> __( 'http://www.yousite.com/join-the-campaign', PLUGIN_TEXT_DOMAIN )
+				),
+				array(
+					'id' 			=> 'degrona15_candidate_donate_button_text',
+					'label'			=> __( 'Donate button text' , PLUGIN_TEXT_DOMAIN ),
+					'description'	=> __( 'Add your donate button text.', PLUGIN_TEXT_DOMAIN ),
+					'type'			=> 'text',
+					'default'		=> __( 'Donate', PLUGIN_TEXT_DOMAIN ),
+					'placeholder'	=> __( 'Donate', PLUGIN_TEXT_DOMAIN )
 				),
 				array(
 					'id' 			=> 'degrona15_candidate_donate_url',
 					'label'			=> __( 'Donate page url' , PLUGIN_TEXT_DOMAIN ),
 					'description'	=> __( 'Add your donate page url.', PLUGIN_TEXT_DOMAIN ),
-					'type'			=> 'text',
+					'type'			=> 'url',
 					'default'		=> '',
 					'placeholder'	=> __( 'http://www.donateme.com/myname', PLUGIN_TEXT_DOMAIN )
 				)
@@ -373,6 +389,8 @@ class De_Grona_Ehdokas_Settings {
 
 		delete_transient( 'degrona15_candidate_transient' );
 		delete_transient( 'degrona15_candidate_contact_info_transient' );
+		delete_transient( 'degrona15_candidate_call_to_action_buttons_transient' );
+
 	}
 
 	/**
