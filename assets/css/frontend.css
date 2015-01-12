@@ -105,3 +105,19 @@
           font-size: 350%; } }
   .de_grona_candidate_wrap .de_grona_candidate_img img {
     max-height: 500px; }
+
+footer .degrona15_candidate.button {
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 1px; }
+
+.degrona15_candidate.button {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-right: .5rem; }
+  .degrona15_candidate.button:last-of-type {
+    margin-right: 0; }
+  .degrona15_candidate.button i {
+    color: #ffffff;
+    margin-right: .25rem; }
