@@ -318,7 +318,7 @@ class De_Grona_Ehdokas_Settings {
 					'description'	=> __( 'Add your donate page url.', PLUGIN_TEXT_DOMAIN ),
 					'type'			=> 'url',
 					'default'		=> '',
-					'placeholder'	=> __( 'http://www.donateme.com/myname', PLUGIN_TEXT_DOMAIN )
+					'placeholder'	=> __( 'https://lahjoita.vihreat.fi', PLUGIN_TEXT_DOMAIN )
 				)
 			)
 		);
